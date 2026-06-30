@@ -103,6 +103,96 @@ start.bat
 4. Build Command: `pip install -r requirements.txt`
 5. Start Command: `gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120 --workers 2`
 
+## Architecture
+
+```mermaid
+graph TD
+    A[Browser - localhost:5000] --> B[Flask App - app.py]
+    B --> C[Yahoo Finance API]
+    B --> D[klsescreener.com]
+    B --> E[Analyzer Engine]
+    
+    E --> F[Standard Indicators]
+    E --> G[Homily Indicators]
+    E --> H[Extra Indicators]
+    E --> I[Signal Engine]
+    
+    F --> F1[RSI, MACD, Stochastic, CCI, ADX]
+    F --> F2[Bollinger, SMA, EMA, Williams %R]
+    
+    G --> G1[MCD Multicolor Dragon]
+    G --> G2[Deviation Expert]
+    G --> G3[QSW Trend Expert]
+    G --> G4[Homily Rainbow]
+    G --> G5[Homily Position]
+    G --> G6[Banker Hunter Module]
+    
+    H --> H1[KDJ, OBV, Ichimoku]
+    H --> H2[Support/Resistance]
+    H --> H3[Fibonacci Retracement]
+    
+    I --> J[BUY / SELL / HOLD Verdict]
+```
+
+## Signal Flow
+
+```mermaid
+graph LR
+    A[Price Data] --> B[25+ Indicators]
+    B --> C{Vote: +1 Buy / -1 Sell / 0 Neutral}
+    C --> D[Weighted Score -100 to +100]
+    D --> E{Score > 25?}
+    E -->|Yes| F[BUY]
+    E -->|No| G{Score < -25?}
+    G -->|Yes| H[SELL]
+    G -->|No| I[HOLD]
+    
+    D --> J[Confidence %]
+    D --> K[Stop Loss - ATR based]
+    D --> L[Target Price - ATR based]
+```
+
+## Scanner Architecture
+
+```mermaid
+graph TD
+    A[Stock Universe] --> B{Which Scanner?}
+    B -->|Divergence| C[DE + MACD Crossover/Divergence]
+    B -->|Forecast| D[Volume Slope + Price Trend + Smoothness]
+    B -->|Rainbow| E[5-EMA Convergence + Green Cross + Volume]
+    
+    C --> F[Score & Rank]
+    D --> F
+    E --> F
+    F --> G[Results sorted by conviction]
+```
+
+## Indicator Categories
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    SIGNAL ENGINE (25+ indicators)                 │
+├──────────────┬──────────────────┬──────────────┬────────────────┤
+│  MOMENTUM    │  TREND           │  VOLUME      │  PROPRIETARY   │
+├──────────────┼──────────────────┼──────────────┼────────────────┤
+│ RSI (14)     │ MACD             │ OBV          │ MCD 六彩神龙    │
+│ Stochastic   │ Parabolic SAR    │ MCDX Chips   │ DE 背离王      │
+│ KDJ          │ ADX              │ Banker Hold  │ QSW 趋势王     │
+│ Williams %R  │ Ichimoku Cloud   │ Banker Ctrl  │ Rainbow 弘历彩虹│
+│ CCI          │ Homily Rainbow   │ Accumulation │ Position 弘历进出│
+│ Momentum     │ Homily Position  │ Vol Growth   │ L3 Banker      │
+│ AO / UO      │ Fibonacci        │ Wash Out     │ Profit Line    │
+└──────────────┴──────────────────┴──────────────┴────────────────┘
+                              │
+                              ▼
+              ┌───────────────────────────────┐
+              │  VERDICT: BUY / SELL / HOLD    │
+              │  Score: -100 to +100           │
+              │  Confidence: 0-100%            │
+              │  Stop Loss | Target | R:R      │
+              └───────────────────────────────┘
+```
+
 ## Data Sources
 
 | Source | What it provides |
