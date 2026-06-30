@@ -121,6 +121,11 @@ def api_stock_detail(symbol):
             "avg_volume": int(analyzer.df["Volume"].mean()),
             "volatility": round(float(analyzer.df["Daily_Return"].std() * (252**0.5) * 100), 2),
         },
+        "support_resistance": {
+            "support": getattr(analyzer, 'support_levels', []),
+            "resistance": getattr(analyzer, 'resistance_levels', []),
+        },
+        "fibonacci": getattr(analyzer, 'fibonacci', {}),
         "deviation_history": [
             {
                 "date": row.Index.strftime("%Y-%m-%d"),

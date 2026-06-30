@@ -10,6 +10,10 @@ from homily_indicators import (
     calculate_profit_line, calculate_banker_cost, calculate_banker_control,
     calculate_banker_holding, calculate_wash_out, calculate_banker_zlcc
 )
+from extra_indicators import (
+    calculate_kdj, calculate_obv, calculate_ichimoku,
+    calculate_support_resistance, calculate_fibonacci
+)
 
 
 class StockAnalyzer:
@@ -226,6 +230,30 @@ class StockAnalyzer:
 
         # --- Momentum (10-period) ---
         self.df["Momentum"] = close - close.shift(10)
+
+        # --- KDJ ---
+        k, d, j = calculate_kdj(high.values, low.values, close.values)
+        self.df["KDJ_K"] = k
+        self.df["KDJ_D"] = d
+        self.df["KDJ_J"] = j
+
+        # --- OBV ---
+        self.df["OBV"] = calculate_obv(close.values, self.df["Volume"].values.astype(float))
+
+        # --- Ichimoku Cloud ---
+        ichi = calculate_ichimoku(high.values, low.values, close.values)
+        self.df["Ichimoku_Tenkan"] = ichi["tenkan"]
+        self.df["Ichimoku_Kijun"] = ichi["kijun"]
+        self.df["Ichimoku_SpanA"] = ichi["senkou_a"]
+        self.df["Ichimoku_SpanB"] = ichi["senkou_b"]
+
+        # --- Support/Resistance ---
+        support, resistance = calculate_support_resistance(high.values, low.values, close.values)
+        self.support_levels = [round(float(s), 4) for s in support]
+        self.resistance_levels = [round(float(r), 4) for r in resistance]
+
+        # --- Fibonacci ---
+        self.fibonacci = calculate_fibonacci(high.values, low.values, close.values)
 
         # --- Stochastic %K and %D (14,3,3) ---
         low14 = low.rolling(14).min()
@@ -620,6 +648,45 @@ class StockAnalyzer:
             signals.append({"name": "Momentum (10)", "value": round(mom, 4), "signal": sig})
         else:
             signals.append({"name": "Momentum (10)", "value": None, "signal": "Not enough data"})
+
+        # KDJ
+        kdj_j = safe(latest.get("KDJ_J"))
+        kdj_k = safe(latest.get("KDJ_K"))
+        kdj_d = safe(latest.get("KDJ_D"))
+        if kdj_j is not None:
+            if kdj_j > 100:
+                sig = "Sell"
+                desc = "Overbought"
+            elif kdj_j < 0:
+                sig = "Buy"
+                desc = "Oversold"
+            elif kdj_k > kdj_d:
+                sig = "Buy"
+                desc = "K>D"
+            else:
+                sig = "Sell"
+                desc = "K<D"
+            signals.append({"name": "KDJ", "value": round(kdj_j, 2), "signal": f"{sig} (J={kdj_j:.0f} {desc})"})
+        else:
+            signals.append({"name": "KDJ", "value": None, "signal": "Not enough data"})
+
+        # Ichimoku
+        tenkan = safe(latest.get("Ichimoku_Tenkan"))
+        kijun = safe(latest.get("Ichimoku_Kijun"))
+        if tenkan is not None and kijun is not None:
+            price = float(latest["Close"])
+            if price > tenkan and price > kijun and tenkan > kijun:
+                sig = "Buy"
+                desc = "Above Cloud"
+            elif price < tenkan and price < kijun and tenkan < kijun:
+                sig = "Sell"
+                desc = "Below Cloud"
+            else:
+                sig = "Neutral"
+                desc = "In Cloud"
+            signals.append({"name": "Ichimoku Cloud", "value": None, "signal": f"{sig} ({desc})"})
+        else:
+            signals.append({"name": "Ichimoku Cloud", "value": None, "signal": "Not enough data"})
 
         # Stochastic
         stoch_k = safe(latest.get("Stoch_K"))
