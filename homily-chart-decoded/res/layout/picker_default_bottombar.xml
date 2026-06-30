@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="16.0sp" android:textColor="#ffffff" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/mDirButton" android:background="@null" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxWidth="180.0dp" android:text="" android:maxLines="1" android:singleLine="true" android:drawablePadding="4.0dp" android:layout_centerVertical="true" android:drawableEnd="@mipmap/picker_text_indicator" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/mPreview" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="预览" android:paddingStart="15.0dp" android:paddingEnd="15.0dp" android:layout_alignParentEnd="true" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toStartOf="@id/mPreview" android:layout_toEndOf="@id/mDirButton">
+        <CheckBox android:textColor="@color/white_F5" android:gravity="center" android:layout_gravity="center" android:id="@id/mCheckBox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null" android:text="原图" android:drawablePadding="5.0dp" />
+    </FrameLayout>
+</RelativeLayout>

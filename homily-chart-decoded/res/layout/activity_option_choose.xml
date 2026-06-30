@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="#fd9bca" android:layout_width="match_parent" android:layout_height="48.0dp">
+        <ImageView android:id="@id/option_choose_back" android:layout_width="22.0dp" android:layout_height="22.0dp" android:src="@drawable/ic_back" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/option_choose_title" />
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:id="@id/rl_top" android:background="@color/white" android:paddingLeft="12.0dp" android:paddingTop="6.0dp" android:paddingRight="12.0dp" android:paddingBottom="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:id="@id/option_choose_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:textColor="#66000000" android:id="@id/option_choose_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dp" android:layout_alignParentEnd="true" />
+        <TextView android:textSize="13.0sp" android:textColor="#66000000" android:id="@id/option_choose_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_below="@id/option_choose_title" />
+    </RelativeLayout>
+    <LinearLayout android:background="@color/textColor_LLGray" android:paddingLeft="12.0dp" android:paddingTop="5.0dp" android:paddingRight="12.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="16.0sp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/elita_name" android:layout_weight="2.6" />
+        <TextView android:textSize="16.0sp" android:id="@id/tv_price" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_buy_price" android:layout_weight="2.0" />
+        <TextView android:textSize="16.0sp" android:id="@id/tv_rise" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/option_choose_rise" android:layout_weight="2.0" />
+    </LinearLayout>
+    <ListView android:id="@id/option_choose_lv" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

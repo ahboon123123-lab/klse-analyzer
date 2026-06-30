@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/detail_parent_layout" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <com.hlzzb.xjp.ui.stock.view.RecyclerViewContextMenu android:id="@id/recyclerview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/toolbar" android:layout_below="@id/tool" />
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/toolbar" android:background="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/review" android:background="#274553" android:layout_width="0.0dp" android:layout_height="48.0dp" android:text="@string/reply_function" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:visibility="visible" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>

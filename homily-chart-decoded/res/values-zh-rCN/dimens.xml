@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="canvas_side_text_size">10.0sp</dimen>
+    <dimen name="canvas_text_size">14.0sp</dimen>
+    <dimen name="chips">40.0dp</dimen>
+    <dimen name="chips_top">30.0dp</dimen>
+    <dimen name="information">40.0dp</dimen>
+    <dimen name="margin_top_elita">0.0dp</dimen>
+    <dimen name="recommendation">35.0dp</dimen>
+    <dimen name="stock_canvas_defaultKlineWidth">4.0dp</dimen>
+    <dimen name="stock_canvas_minKlineWidth">1.0dp</dimen>
+    <dimen name="textsize">14.0sp</dimen>
+    <dimen name="textview_weight">20.0dp</dimen>
+</resources>

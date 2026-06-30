@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/main_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" skin:enable="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include android:id="@id/tool" layout="@layout/toolbar" />
+        <LinearLayout android:orientation="vertical" android:background="@color/main_bg" android:padding="@dimen/more_padding" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tool" skin:enable="true">
+            <EditText android:textColor="@color/text_color_black" android:id="@id/account" android:layout_width="match_parent" android:layout_height="48.0dp" android:hint="@string/login_username_hint" android:lines="1" android:inputType="text" skin:enable="true" />
+            <EditText android:textColor="@color/text_color_black" android:id="@id/password" android:layout_width="match_parent" android:layout_height="48.0dp" android:hint="@string/login_password_hint" android:inputType="textPassword" skin:enable="true" />
+            <Button android:textColor="#ffffff" android:id="@id/login" android:background="@drawable/btn_login" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/login" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

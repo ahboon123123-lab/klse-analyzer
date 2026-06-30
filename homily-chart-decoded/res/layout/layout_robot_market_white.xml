@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_12dp" android:paddingRight="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/prime_tag" />
+        <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@android:color/black" android:id="@id/tv_robot_title" android:padding="@dimen/padding_12dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_8dp" android:text="@string/prime_market_title" android:layout_weight="1.0" />
+        <ImageView android:gravity="center" android:id="@id/iv_robot_more" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="@dimen/margin_4dp" android:src="@drawable/ic_go_black" />
+    </LinearLayout>
+    <hc.com.robot.view.StockProfitView android:id="@id/profit_view" android:paddingLeft="@dimen/padding_8dp" android:paddingTop="@dimen/padding_12dp" android:paddingRight="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_12dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="220.0dp" />
+    <include layout="@layout/layout_divider_lighth" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <me.grantland.widget.AutofitTextView android:textColor="@android:color/black" android:gravity="center_horizontal" android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp" android:text="@string/all_one_title" android:maxLines="1" app:minTextSize="@dimen/textsize_12sp" />
+            <TextView android:textSize="@dimen/textsize_25sp" android:textStyle="bold" android:textColor="@color/textColor_Green" android:gravity="center_horizontal" android:id="@id/tv_one_rate" android:padding="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_none" android:lines="1" />
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <me.grantland.widget.AutofitTextView android:textColor="@android:color/black" android:gravity="center_horizontal" android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp" android:text="@string/all_three_title" android:maxLines="1" app:minTextSize="@dimen/textsize_12sp" />
+            <TextView android:textSize="@dimen/textsize_25sp" android:textStyle="bold" android:textColor="@color/textColor_Green" android:gravity="center_horizontal" android:id="@id/tv_three_rate" android:padding="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_none" android:lines="1" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

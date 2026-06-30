@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="555" android:drawable="@drawable/ic_homilykits_one" />
+    <item android:duration="555" android:drawable="@drawable/ic_homilykits_two" />
+    <item android:duration="555" android:drawable="@drawable/ic_homilykits_three" />
+    <item android:duration="555" android:drawable="@drawable/ic_homilykits_one" />
+    <item android:duration="555" android:drawable="@drawable/ic_homilykits_two" />
+    <item android:duration="555" android:drawable="@drawable/ic_homilykits_three" />
+</animation-list>

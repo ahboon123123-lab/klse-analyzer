@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/colorWhite" android:paddingLeft="@dimen/padding_8dp" android:paddingRight="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_Kline" android:focusable="true" android:clickable="true" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="4.0">
+        <RelativeLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textStyle="bold" android:textColor="@color/textColor_Black" android:gravity="center" android:id="@id/iv_strategy_order" android:background="@drawable/bee_order_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3" android:layout_centerInParent="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/padding_4dp" android:paddingBottom="@dimen/padding_4dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/padding_4dp">
+            <TextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_name" android:layout_width="match_parent" android:layout_height="40.0dp" android:maxLines="2" android:layout_weight="1.0" />
+            <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_LightGray" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4dp" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/padding_4dp" android:paddingBottom="@dimen/padding_4dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:paddingStart="@dimen/padding_4dp">
+            <TextView android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_price" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_weight="1.0" />
+            <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_LightGray" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_4dp" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" android:paddingStart="@dimen/padding_8dp" app:minTextSize="@dimen/textsize_10sp" />
+        </LinearLayout>
+        <TextView android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_rate" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_profit" android:focusable="true" android:clickable="true" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</LinearLayout>

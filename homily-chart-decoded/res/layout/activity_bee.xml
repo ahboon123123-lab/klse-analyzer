@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/robot_bee_layout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_bee" android:background="#01e9ff" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:background="@drawable/bee_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+            <hc.com.robot.view.wave.WaveView android:layout_gravity="bottom" android:id="@id/waveview_bee" android:layout_width="match_parent" android:layout_height="match_parent" app:behind_color="@color/wave_behind" app:front_color="@color/wave_front" app:shape_type="rectangle" />
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_35sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:text="@string/title_bee" app:FontsTextView_typeface="airstrike" />
+                <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_20sp" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_12dp" android:text="@string/subtitle_robot" app:FontsTextView_typeface="airstrike" />
+                <ImageView android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_30dp" android:src="@drawable/ic_bee" />
+                <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp">
+                    <TextView android:background="@drawable/bee_charact_bg" android:text="@string/bee_charac_one" android:layout_marginEnd="@dimen/margin_12dp" style="@style/TextStyleCharact" />
+                    <TextView android:background="@drawable/bee_charact_bg" android:text="@string/bee_charac_two" style="@style/TextStyleCharact" />
+                    <TextView android:background="@drawable/bee_charact_bg" android:text="@string/bee_charac_three" android:layout_marginStart="@dimen/margin_12dp" style="@style/TextStyleCharact" />
+                </LinearLayout>
+                <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_16sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_marginTop="@dimen/margin_12dp" android:text="@string/yield_rate" app:FontsTextView_typeface="huakang" style="@style/TextStyle" />
+                <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:padding="@dimen/padding_20dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <hc.com.robot.view.FontsTextView android:id="@id/tv_bee_rate" android:text="@string/all_none" app:FontsTextView_typeface="airstrike" style="@style/FontsStyleRate" />
+                    <hc.com.robot.view.FontsTextView android:text="%" android:layout_marginStart="@dimen/margin_2dp" app:FontsTextView_typeface="airstrike" style="@style/FontsStyleRate" />
+                </LinearLayout>
+                <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_18sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_follow_tips" app:FontsTextView_typeface="huakang" style="@style/TextStyle" />
+                <hc.com.robot.view.FontsTextView android:id="@id/btn_follow_bee" android:background="@drawable/shape_follow_bee" android:text="@string/all_follow" app:FontsTextView_typeface="airstrike" style="@style/FontsStyleFollow" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.youth.banner.Banner android:id="@id/banner" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" app:image_scale_type="fit_xy" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="@color/white" android:id="@id/login" android:background="@drawable/btn_nav_login" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/login_text" android:layout_weight="1.0" />
+        <Button android:textColor="@color/white" android:id="@id/register" android:background="@drawable/btn_nav_register" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/login_btn_register" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

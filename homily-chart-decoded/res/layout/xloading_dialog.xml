@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/xframe_loading_view" android:background="@color/white" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wang.avi.AVLoadingIndicatorView android:layout_gravity="center" android:id="@id/xframe_loading_progressbar" android:layout_width="24.0dp" android:layout_height="24.0dp" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/XFrame_loading_dialog_message" android:layout_gravity="center" android:id="@id/xframe_loading_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/big_adapter_loading" />
+</LinearLayout>

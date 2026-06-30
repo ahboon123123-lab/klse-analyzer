@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/irohide_bg2" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_stockpool" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+    <TextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/stock_pool_name" android:background="@drawable/miage_data_kuang_normal_height" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/stockpool_threedata" />
+    <LinearLayout android:id="@id/index_title" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/stock_pool_title" />
+    </LinearLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:srlAccentColor="#00000000" app:srlEnablePreviewInEditMode="true" app:srlPrimaryColor="#00000000">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/three_data_rv" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

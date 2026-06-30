@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/main_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" skin:enable="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <ScrollView android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/tool">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="72.0dp">
+                <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_toStartOf="@id/avatar">
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="18.0sp" android:textColor="@color/gray" android:id="@id/nick" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/nick" android:maxLength="50" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageView android:id="@id/avatar" android:layout_width="72.0dp" android:layout_height="72.0dp" android:src="@drawable/change_avatar" android:scaleType="fitXY" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="16.0dp">
+                <TextView android:textSize="18.0sp" android:textColor="@color/gray" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/country" />
+                <TextView android:textColor="@color/colorAccent" android:gravity="end|center" android:id="@id/country" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginEnd="8.0dp" />
+            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/gray" android:id="@id/dialingCode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.google.android.material.textfield.TextInputEditText android:textSize="18.0sp" android:textColor="@color/gray" android:textColorHint="@color/gray" android:id="@id/phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:hint="@string/register_mobile_hint" android:editable="false" android:drawableBottom="@null" android:inputType="phone" />
+                </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp">
+                <com.google.android.material.textfield.TextInputEditText android:textSize="18.0sp" android:textColor="@color/gray" android:id="@id/password" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/register_password_hint" android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button android:enabled="false" android:textColor="@color/colorWhite" android:layout_gravity="center_horizontal" android:id="@id/register" android:background="@drawable/btn_register" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dp" android:layout_marginTop="16.0dp" android:layout_marginRight="16.0dp" android:text="@string/register" />
+        </LinearLayout>
+    </ScrollView>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <View android:background="@color/activity_back" android:layout_width="match_parent" android:layout_height="match_parent" android:alpha="0.3" skin:enable="true" />
+</RelativeLayout>

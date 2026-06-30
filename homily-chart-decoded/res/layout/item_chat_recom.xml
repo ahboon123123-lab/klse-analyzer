@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="30.0sp" android:textColor="@color/font_red" android:gravity="center" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/elita_can_ask" />
+    <hc.com.robot.ui.robotelita.custom.FlyView android:id="@id/flyview" android:layout_width="match_parent" android:layout_height="250.0dp" />
+</LinearLayout>

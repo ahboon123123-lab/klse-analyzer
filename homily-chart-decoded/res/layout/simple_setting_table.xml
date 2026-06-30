@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/robot_menu_corner" android:padding="10.0dp" android:layout_width="250.0dp" android:layout_height="250.0dp" android:layout_centerInParent="true">
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/show_setting_bee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bumblebee" android:drawableTop="@mipmap/ic_bee" android:layout_centerVertical="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/show_setting_elita" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Elita One" android:drawableTop="@mipmap/ic_elita" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/show_setting_prime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Optimus Prime" android:drawableTop="@mipmap/ic_prime" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/show_setting_home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80.0dp" android:src="@mipmap/ic_home" android:layout_alignParentTop="true" android:layout_centerInParent="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/show_setting_mirage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mirage" android:drawableTop="@mipmap/ic_mirage" android:layout_alignParentBottom="true" android:layout_marginStart="-10.0dp" android:layout_toEndOf="@id/show_setting_home" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/show_setting_iron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ironhide" android:drawableTop="@mipmap/ic_iron" android:layout_alignParentBottom="true" android:layout_marginEnd="-10.0dp" android:layout_toStartOf="@id/show_setting_home" />
+    </RelativeLayout>
+</RelativeLayout>

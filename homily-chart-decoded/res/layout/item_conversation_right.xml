@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/bk" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="11.0sp" android:textColor="@color/font_black_3" android:id="@id/tv_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_marginBottom="5.0dp" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/civ_avatar" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_marginLeft="4.0dp" android:layout_marginRight="8.0dp" android:src="@drawable/icon_default" android:scaleType="centerCrop" android:layout_alignParentRight="true" app:civ_border_color="@color/bk" app:civ_border_width="1.0dp" />
+        <com.daasuu.bl.BubbleLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_toLeftOf="@id/civ_avatar" app:bl_arrowDirection="right" app:bl_arrowHeight="10.0dp" app:bl_arrowPosition="14.0dp" app:bl_arrowWidth="8.0dp" app:bl_bubbleColor="@color/bg_pink" app:bl_cornersRadius="8.0dp">
+            <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/tv_message" android:padding="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </com.daasuu.bl.BubbleLayout>
+    </RelativeLayout>
+</LinearLayout>

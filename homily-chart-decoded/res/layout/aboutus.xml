@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logo" android:contentDescription="@null" />
+            <TextView android:textSize="26.0sp" android:textColor="@color/white" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/version" android:paddingTop="30.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_gravity="center" android:paddingTop="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" android:text="@string/about_us_text" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/white" android:layout_gravity="center" android:paddingTop="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about_us_platform" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

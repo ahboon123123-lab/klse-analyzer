@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="120.0dp" android:layout_height="50.0dp">
+        <TextView android:textColor="@color/yellow" android:gravity="center" android:id="@id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@null" android:singleLine="true" />
+        <TextView android:textColor="@color/code" android:gravity="center" android:id="@id/code" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@null" />
+    </LinearLayout>
+    <com.hlzzb.xjp.widget.LinearLayoutIntercept android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.hlzzb.xjp.widget.StockScrollView android:id="@id/stockListView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/price" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/rate" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/rise" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/preClose" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/vol" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/amount" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/open" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/high" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/low" android:layout_width="80.0dp" android:layout_height="50.0dp" android:text="@null" />
+            </LinearLayout>
+        </com.hlzzb.xjp.widget.StockScrollView>
+    </com.hlzzb.xjp.widget.LinearLayoutIntercept>
+</LinearLayout>

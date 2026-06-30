@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="#30000000" android:paddingLeft="10.0dp" android:paddingTop="40.0dp" android:paddingRight="10.0dp" android:paddingBottom="40.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_sign_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/reward_gold" android:scaleType="fitCenter" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_reward" android:layout_width="300.0dp" android:layout_height="100.0dp" android:layout_marginTop="20.0dp" android:src="@drawable/sign_in_text_gold" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="16.0sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@id/tv_tip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="签到获得5金币" android:layout_below="@id/im_reward" android:layout_centerHorizontal="true" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tv_tip">
+            <ImageView android:id="@id/iv_mid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:src="@drawable/reward_money_gold" />
+            <TextView android:textSize="40.0sp" android:textColor="#f4e987" android:layout_gravity="center" android:id="@id/tv_money" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginTop="5.0dp" android:text="+5" />
+        </LinearLayout>
+        <Button android:textSize="20.0sp" android:textColor="@color/white" android:layout_gravity="center|bottom" android:id="@id/btn_ikow" android:background="@drawable/select_white_no_stroke" android:paddingLeft="50.0dp" android:paddingRight="50.0dp" android:layout_width="wrap_content" android:layout_height="45.0dp" android:layout_marginTop="30.0dp" android:text="@string/personal_sign" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

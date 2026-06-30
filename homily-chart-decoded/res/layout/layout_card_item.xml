@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="@dimen/all_card_height"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_gravity="center|bottom" android:orientation="horizontal" android:id="@id/layout_robot_item" android:background="@drawable/bee_detial_bg" android:paddingTop="@dimen/margin_4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingEnd="@dimen/margin_8dp">
+        <hc.com.robot.view.FontsTextView android:id="@id/tv_robot_rate_num" android:text="@string/all_none" app:FontsTextView_typeface="airstrike" style="@style/TextStyleRateValue" />
+        <hc.com.robot.view.FontsTextView android:text="@string/all_amount_name" android:layout_below="@id/tv_robot_rate_num" android:layout_alignEnd="@id/tv_robot_rate_num" app:FontsTextView_typeface="huakang" style="@style/TextStyleRate" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="bottom" android:paddingBottom="@dimen/padding_4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/padding_8dp">
+        <hc.com.robot.view.FontsTextView android:id="@id/tv_robot_imitate" android:text="@string/imitate_buy" app:FontsTextView_typeface="huakang" style="@style/TextStyleImitate" />
+        <hc.com.robot.view.FontsTextView android:id="@id/tv_robot_deal" android:text="@string/all_deal_time" android:layout_below="@id/tv_robot_imitate" app:FontsTextView_typeface="huakang" style="@style/TextStyleDeal" />
+        <hc.com.robot.view.FontsTextView android:id="@id/tv_robot_deal_time" android:text="@string/all_none" android:layout_alignBottom="@id/tv_robot_deal" android:layout_toEndOf="@id/tv_robot_deal" app:FontsTextView_typeface="airstrike" style="@style/TextStyleDeal" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/margin_20dp">
+        <ImageView android:id="@id/iv_robot_pic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bee_card" />
+        <hc.com.robot.view.FontsTextView android:id="@id/iv_robot_name" android:text="@string/title_bee" android:layout_toEndOf="@id/iv_robot_pic" app:FontsTextView_typeface="airstrike" style="@style/TextStyleCardName" />
+    </RelativeLayout>
+</FrameLayout>

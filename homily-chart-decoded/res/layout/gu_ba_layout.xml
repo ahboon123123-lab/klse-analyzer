@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/linerlayout" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/loading" android:visibility="visible" android:layout_width="match_parent" android:layout_height="@dimen/dp_40">
+        <ProgressBar android:layout_width="@dimen/margin_16dp" android:layout_height="@dimen/margin_16dp" android:layout_margin="8.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#bbbbbb" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8.0dp" android:text="@string/connect_loading_data" />
+    </LinearLayout>
+    <TextView android:textSize="16.0sp" android:textColor="#bbbbbb" android:layout_gravity="center_horizontal" android:id="@id/noMoreData" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="@dimen/dp_40" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:text="@string/no_more_data" />
+    <TextView android:textSize="16.0sp" android:textColor="#bbbbbb" android:layout_gravity="center_horizontal" android:id="@id/sharesNoData" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:text="@string/zwsj" />
+</LinearLayout>

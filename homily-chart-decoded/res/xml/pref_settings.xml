@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/settings_category_appsetting">
+        <Preference android:title="@string/settings_language" android:key="language" android:summary="中文(简体)" />
+        <CheckBoxPreference android:title="@string/settings_remind" android:key="remind" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/settings_syncstock" android:key="sync" android:defaultValue="true" />
+        <Preference android:title="@string/settings_clearcache" android:key="clearCache" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_website">
+        <Preference android:title="@string/settings_website" android:key="homilychart" android:summary="http://www.homilychart.com" />
+        <Preference android:title="@string/settings_facebook" android:key="facebook" android:summary="http://www.facebook.com/HomilyChart" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/settings_category_help">
+        <Preference android:title="@string/settings_aboutus" android:key="aboutus" />
+        <Preference android:title="@string/settings_help" android:key="help" />
+        <Preference android:title="@string/settings_evaluate" android:key="evaluate" />
+        <Preference android:title="@string/settings_feedback" android:key="feedback" />
+    </PreferenceCategory>
+</PreferenceScreen>

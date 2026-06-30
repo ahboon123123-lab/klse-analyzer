@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/sor_mianze" android:layout_width="match_parent" android:layout_height="250.0dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:layout_marginRight="5.0dp" android:text="@string/mzneirong" />
+    </ScrollView>
+    <CheckBox android:textSize="15.0sp" android:id="@id/ck_agree" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:checked="true" android:text="@string/splash_agree" android:layout_below="@id/sor_mianze" />
+</RelativeLayout>

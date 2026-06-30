@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/zb_layout" android:background="@color/white" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="10.0dp" android:paddingEnd="@dimen/dp_10">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/zb_image" android:layout_width="55.0dp" android:layout_height="55.0dp" android:src="@drawable/icon_yzcj_disable" />
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingLeft="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="6.0dp">
+            <TextView android:textSize="18.0sp" android:textColor="@color/grey" android:id="@id/zb_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/bull_knife_yzcj" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/grey" android:id="@id/zb_introduce" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:text="@string/bull_knife_yzcj_intro" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:id="@id/divideView" android:background="@color/color_personal_item_pressed" android:layout_width="match_parent" android:layout_height="3.0dp" android:layout_marginLeft="70.0dp" android:layout_marginStart="70.0dp" />
+</LinearLayout>

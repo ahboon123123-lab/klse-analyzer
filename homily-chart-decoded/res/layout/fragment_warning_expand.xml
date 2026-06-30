@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/sf_refresh" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+            <ExpandableListView android:id="@id/el_content" android:layout_width="match_parent" android:layout_height="match_parent" android:cacheColorHint="#d5d5d5" android:childDivider="#e8e8e8" android:divider="#d5d5d5" android:dividerHeight="1.0dp" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <LinearLayout android:id="@id/ll_warn_container" android:background="#8f8f8f" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:padding="10.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_warn_allcheck" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_allcheck" android:drawableRight="@drawable/icon_warn_ok" android:drawablePadding="4.0dp" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:padding="10.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_warn_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_cancel" android:drawableRight="@drawable/icon_warn_cancel" android:drawablePadding="4.0dp" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <RelativeLayout android:padding="10.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_warn_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_delete" android:drawableRight="@drawable/icon_warn_delete" android:drawablePadding="4.0dp" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/empty_view" layout="@layout/item_warning_empty" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar" />
+    <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ProgressBar android:id="@id/progressbar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="5.0dp" android:max="100" android:progress="0" style="?android:progressBarStyleHorizontal" />
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <WebView android:id="@id/zxwz_web" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <RelativeLayout android:gravity="center_vertical" android:background="#cccccc" android:layout_width="match_parent" android:layout_height="40.0dp">
+                <ImageButton android:id="@id/prev" android:background="@drawable/f10_prev" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" android:layout_marginStart="10.0dp" />
+                <ImageButton android:id="@id/next" android:background="@drawable/f10_next" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" android:layout_marginStart="15.0dp" android:layout_toEndOf="@id/prev" />
+                <ImageButton android:id="@id/refresh" android:background="@drawable/f10_refresh" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" android:layout_marginEnd="10.0dp" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

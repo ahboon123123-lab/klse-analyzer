@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar" />
+    <LinearLayout android:orientation="vertical" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/personalmessage" android:background="@drawable/bg_infocenter_tab" android:layout_width="0.0dp" android:layout_height="48.0dp" android:text="@string/info_center_personal" android:layout_weight="1.0" />
+            <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/activitymessage" android:layout_width="0.0dp" android:layout_height="48.0dp" android:text="@string/info_center_activity" android:layout_weight="1.0" />
+        </LinearLayout>
+        <FrameLayout android:id="@id/fragment_container" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

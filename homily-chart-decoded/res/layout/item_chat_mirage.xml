@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/bk" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/textsize_12sp" android:textColor="@color/font_black_3" android:id="@id/tv_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_marginBottom="5.0dp" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/civ_avatar" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_marginLeft="8.0dp" android:layout_marginRight="4.0dp" android:src="@drawable/icon_ai" android:scaleType="centerCrop" android:layout_alignParentLeft="true" app:civ_border_color="@color/bk" app:civ_border_width="1.0dp" />
+        <com.daasuu.bl.BubbleLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:layout_toRightOf="@id/civ_avatar" app:bl_arrowDirection="left" app:bl_arrowHeight="10.0dp" app:bl_arrowPosition="14.0dp" app:bl_arrowWidth="8.0dp" app:bl_bubbleColor="@color/bg_pink" app:bl_cornersRadius="8.0dp">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="4.0dp" android:layout_marginBottom="10.0dp">
+                    <TextView android:textSize="@dimen/textsize_18sp" android:textColor="@color/white" android:id="@id/tv_cd_title" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/white" android:gravity="right" android:id="@id/tv_cd_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:background="@color/super_light_grey" android:padding="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/black" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/elita_name" android:layout_weight="2.0" />
+                    <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/black" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/lzxg_xgprice" android:layout_weight="1.0" />
+                    <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/black" android:gravity="right" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_amount_name" android:layout_weight="1.2" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_cd_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/font_black_3" android:gravity="right" android:id="@id/tv_cd_more" android:background="@color/white" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/elita_details" />
+                <View android:background="@color/font_black_6" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/font_black_3" android:id="@id/tv_cd_ask" android:background="@color/white" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </com.daasuu.bl.BubbleLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_12dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:padding="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/textsize_18sp" android:textColor="@color/textColor_Black" android:id="@id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_none" android:drawablePadding="@dimen/padding_12dp" android:drawableStart="@drawable/ic_yellow" />
+            <TextView android:textColor="@color/textColor_Black" android:ellipsize="end" android:id="@id/tv_strategy_detial" android:paddingTop="@dimen/padding_4dp" android:paddingBottom="@dimen/padding_4dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:layout_below="@id/tv_title" android:paddingStart="@dimen/padding_12dp" />
+        </RelativeLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_go" android:padding="@dimen/padding_12dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_go_black" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_1dp">
+        <TextView android:textColor="@color/textColor_Gray" android:id="@id/tv_line_title" android:paddingTop="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/robot_market_analyse_syqx" android:layout_marginStart="@dimen/margin_20dp" />
+        <hc.com.robot.view.StockProfitView android:id="@id/stock_view" android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_line_title" />
+    </RelativeLayout>
+</LinearLayout>

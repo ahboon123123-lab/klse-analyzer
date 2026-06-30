@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/ic_robot_iron_introduce" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/swipe_layout" android:layout_width="match_parent" android:layout_height="match_parent" app:srlAccentColor="#00000000" app:srlEnablePreviewInEditMode="true" app:srlPrimaryColor="#00000000">
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_container" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

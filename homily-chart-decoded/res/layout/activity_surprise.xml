@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/lzxg_mid_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/toolbar" />
+        <hc.com.server.view.MarqueeView android:id="@id/marqueeView" android:background="@color/pmd_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="40.0dp" app:direction="left" app:isRepeat="true" app:speed="240" app:startPoint="end" app:textSize="16.0sp" app:textcolor="#7c7b7b" />
+        <ScrollView android:id="@id/content" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:paddingLeft="16.0dp" android:paddingTop="16.0dp" android:paddingRight="16.0dp" android:paddingBottom="32.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/ndxs" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginRight="90.0dp" android:layout_alignParentRight="true">
+                        <ImageView android:layout_width="110.0dp" android:layout_height="110.0dp" android:src="@drawable/icon_ndxs" />
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/banker_ndxs" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/lzxg" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="180.0dp">
+                        <ImageView android:layout_width="130.0dp" android:layout_height="130.0dp" android:src="@drawable/ic_banker_hunter" />
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/banker_lzxg" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/dnyx" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="188.0dp" android:layout_alignParentRight="true">
+                        <ImageView android:layout_width="110.0dp" android:layout_height="110.0dp" android:src="@drawable/icon_dnyx" />
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/banker_dnyx" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/jnsf" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="360.0dp" android:layout_marginRight="90.0dp" android:layout_alignParentRight="true">
+                        <ImageView android:layout_width="110.0dp" android:layout_height="110.0dp" android:src="@drawable/icon_jnsf" />
+                        <TextView android:textSize="16.0sp" android:textStyle="bold" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/banker_jnsf" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/lzxg_bot_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_footer" android:background="@drawable/lzxg_footer" android:padding="22.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/tv_nodata" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

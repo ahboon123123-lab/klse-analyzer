@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@id/iv_classImg" android:layout_width="match_parent" android:layout_height="0.0dp" android:scaleType="fitXY" android:layout_weight="1.0" />
+        <TextView android:background="@color/EntryBorderLineColor" android:layout_width="match_parent" android:layout_height="1.0dp" />
+        <LinearLayout android:background="@drawable/class_item_bg" android:padding="1.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_classDescription" android:background="@color/dk_detail_tab_selected" android:padding="6.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/class_kcjs" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_teacherDescription" android:background="@color/white" android:padding="6.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/class_jsjs" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:background="@drawable/class_group_bg" android:padding="1.0dp" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+            <LinearLayout android:background="@drawable/class_item_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="6.0dp">
+                        <LinearLayout android:orientation="vertical" android:id="@id/ll_class" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/class_title" />
+                                <TextView android:textSize="16.0sp" android:textColor="@color/class_shenhui" android:id="@id/tv_class_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/class_kclx" />
+                                <TextView android:textSize="16.0sp" android:textColor="@color/class_shenhui" android:id="@id/tv_class_type" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/class_time" />
+                                <TextView android:textSize="16.0sp" android:textColor="@color/class_shenhui" android:id="@id/tv_class_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <TextView android:textSize="16.0sp" android:textColor="@color/class_shenhui" android:id="@id/tv_class_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/ll_teacher" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/class_js" />
+                                <TextView android:textSize="16.0sp" android:id="@id/tv_teacher_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <LinearLayout android:orientation="horizontal" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/class_jszc" />
+                                <TextView android:textSize="16.0sp" android:id="@id/tv_teacher_post" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <TextView android:textSize="16.0sp" android:id="@id/tv_teacher_description" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/bt_kcyd" android:background="@color/btn_dk_bg" android:layout_width="match_parent" android:layout_height="40.0dp" android:layout_margin="5.0dp" android:text="@string/class_ydkc" />
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>

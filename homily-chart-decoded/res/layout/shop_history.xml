@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.hlzzb.xjp.common.view.CircleImageView android:id="@id/shop_history_avatar" android:layout_width="50.0dp" android:layout_height="50.0dp" android:src="@drawable/recommender_avatar_default" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_toRightOf="@id/shop_history_avatar">
+            <TextView android:textSize="18.0sp" android:id="@id/shop_history_name" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="16.0sp" android:id="@id/shop_history_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp" />
+            <RatingBar android:id="@id/shop_history_ratingbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:isIndicator="true" style="?android:ratingBarStyleSmall" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/shop_history_btn" android:background="@drawable/shop_btn_details" android:layout_width="60.0dp" android:layout_height="28.0dp" android:layout_marginTop="30.0dp" android:layout_marginRight="4.0dp" android:text="@string/shop_comment" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp">
+        <TextView android:id="@id/shop_history_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="60.0dp" />
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp">
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center" android:id="@id/util_time" android:layout_width="70.0dp" android:layout_height="wrap_content" android:text="" android:layout_alignParentRight="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center" android:id="@id/to" android:layout_width="16.0dp" android:layout_height="wrap_content" android:text="@string/service_time_middle" android:layout_toLeftOf="@id/util_time" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center" android:id="@id/shop_buy_time" android:layout_width="70.0dp" android:layout_height="wrap_content" android:text="" android:layout_toLeftOf="@id/to" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/gray" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/service_time" android:layout_toLeftOf="@id/shop_buy_time" />
+    </RelativeLayout>
+</LinearLayout>

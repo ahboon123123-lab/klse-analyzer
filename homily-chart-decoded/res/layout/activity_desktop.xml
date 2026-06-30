@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.oray.sunlogin.view.RemoteDesktopView android:id="@id/remote_desktop_view" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <include android:visibility="gone" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_alignParentBottom="true" layout="@layout/remote_menu_control" />
+    <TextView android:textSize="22.0sp" android:textColor="@color/white" android:id="@id/connect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0dp" android:text="@string/waiting_for_connection" android:layout_alignBottom="@id/remote_desktop_view" android:layout_centerHorizontal="true" />
+</RelativeLayout>

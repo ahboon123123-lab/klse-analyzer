@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/robot_iron_layout" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/iv_bg_iron" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/irohide_bg2" android:scaleType="fitXY" />
+    <ImageView android:id="@id/lx_left" android:layout_width="100.0dp" android:layout_height="63.0dp" android:src="@drawable/irohide_liuxing" android:layout_marginStart="300.0dp" />
+    <ImageView android:id="@id/lx_center" android:layout_width="100.0dp" android:layout_height="63.0dp" android:src="@drawable/irohide_liuxing" android:layout_marginStart="250.0dp" />
+    <ImageView android:id="@id/lx_right" android:layout_width="100.0dp" android:layout_height="63.0dp" android:layout_marginTop="50.0dp" android:src="@drawable/irohide_liuxing" android:layout_marginStart="300.0dp" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_iron" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/ll_iron_bg" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <hc.com.robot.view.FontsTextView android:textSize="35.0sp" android:textStyle="bold" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dp" android:text="@string/title_iron" app:FontsTextView_typeface="airstrike" />
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40.0dp">
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="300.0dp" android:layout_height="wrap_content" android:layout_marginTop="180.0dp" android:src="@drawable/irohide_bottom" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_width="0.0dp" android:layout_height="350.0dp" android:src="@drawable/irohide_leftpx" android:scaleType="fitXY" android:layout_weight="1.0" />
+                        <ImageView android:layout_width="0.0dp" android:layout_height="350.0dp" android:src="@drawable/irohide_rightpx" android:scaleType="fitXY" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <ImageView android:layout_gravity="center_horizontal" android:layout_width="150.0dp" android:layout_height="170.0dp" android:layout_marginTop="90.0dp" android:src="@drawable/irohide_irohide2" />
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="250.0dp" android:layout_marginTop="@dimen/margin_20dp">
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/left_text" android:layout_width="@dimen/textview_weight" android:layout_height="wrap_content" android:text="@string/artificial_intelligence_decision_system" />
+                        </LinearLayout>
+                        <ImageView android:layout_gravity="center" android:id="@id/iv_iron" android:layout_width="150.0dp" android:layout_height="170.0dp" android:layout_marginTop="@dimen/margin_30dp" android:src="@drawable/irohide_irohide" />
+                        <LinearLayout android:gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/right_text" android:layout_width="@dimen/textview_weight" android:layout_height="wrap_content" android:text="@string/erfect_combination_of_frontier_ideas" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="360.0dp" android:text="@string/iron_introduce" android:paddingStart="30.0dp" android:paddingEnd="30.0dp" />
+                </FrameLayout>
+                <FrameLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:layout_gravity="center" android:id="@id/lightningImage" android:background="@drawable/sd_change" android:layout_width="155.0dp" android:layout_height="55.0dp" />
+                    <ImageView android:layout_gravity="center" android:id="@id/iv_follow" android:background="@drawable/followchange" android:layout_width="210.0dp" android:layout_height="70.0dp" android:layout_marginTop="3.0dp" />
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

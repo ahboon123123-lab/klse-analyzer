@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.hlzzb.xjp.view.CycleViewPager android:id="@id/pager_banner" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/viewGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:layout_alignParentBottom="true" />
+</RelativeLayout>

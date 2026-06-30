@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar" />
+    <com.google.android.material.tabs.TabLayout android:id="@id/sliding_tabs" android:background="@color/colorBlack" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabBackground="@color/colorBlack" app:tabSelectedTextColor="@color/colorWhite" app:tabTextColor="@color/colorWhite" />
+    <FrameLayout android:id="@id/quote_container" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="0.0px" android:layout_weight="1.0" />
+</LinearLayout>

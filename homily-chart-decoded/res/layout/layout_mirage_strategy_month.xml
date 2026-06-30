@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/white" android:id="@id/stock_type_month" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/dp_4" android:layout_marginTop="@dimen/dp_10" />
+    <LinearLayout android:background="@drawable/miage_data_kuang_normal" android:padding="@dimen/dp_4" android:layout_width="match_parent" android:layout_height="@dimen/margin_50dp" android:layout_marginTop="@dimen/dp_10">
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_name" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/lzxg_xgprice" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/lzxg_jzprice" android:layout_weight="1.0" />
+        <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/lzxg_rise" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/container_item" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/margin_20dp" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_no_data" android:background="#12384a" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/margin_40dp" android:text="@string/all_no_data" />
+</LinearLayout>

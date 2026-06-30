@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="16.0dp" android:paddingTop="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/positioncontrol_cash" />
+    <EditText android:textSize="18.0sp" android:id="@id/cash" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" />
+    <CheckBox android:textSize="18.0sp" android:id="@id/displayUntradeRecord" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginBottom="8.0dp" android:text="@string/positioncontrol_displayuntraderecord" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/save" />
+        <Button android:id="@id/restoreDefault" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/restore_default" />
+    </LinearLayout>
+</LinearLayout>

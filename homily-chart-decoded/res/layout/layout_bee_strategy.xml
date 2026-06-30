@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tv_bee_trend" android:text="@string/bee_trend" android:drawableTop="@drawable/ic_trend" style="@style/TextViewBeeLB" />
+    <TextView android:id="@id/tv_bee_time" android:text="@string/bee_time" android:drawableTop="@drawable/ic_time" style="@style/TextViewBeeLB" />
+    <RelativeLayout android:id="@id/tv_shock_pull" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/im_shock_pull" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/shock_pull" android:layout_centerHorizontal="true" />
+        <TextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:text="@string/shock_pull" android:layout_below="@id/im_shock_pull" />
+    </RelativeLayout>
+    <TextView android:id="@id/tv_bee_self" android:text="@string/all_self_analysis" android:drawableTop="@drawable/ic_analysis" style="@style/TextViewBeeLB" />
+</LinearLayout>

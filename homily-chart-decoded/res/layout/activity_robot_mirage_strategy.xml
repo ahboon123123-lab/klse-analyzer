@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center" android:id="@id/iv_bg" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/mirage_bg" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_mirage_strategy" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:srlAccentColor="#00000000" app:srlEnablePreviewInEditMode="true" app:srlPrimaryColor="#00000000">
+            <com.scwang.smartrefresh.layout.header.ClassicsHeader android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/rv_data" android:layout_width="match_parent" android:layout_height="match_parent" />
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/coverImageContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@id/fl_1" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/coverImage1" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/mirage_push_left" android:scaleType="fitXY" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/fl_2" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/coverImage2" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" />
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/mirage_push_right" android:scaleType="fitXY" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

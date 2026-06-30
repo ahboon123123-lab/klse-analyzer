@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:theme="@style/ThemeOverlay.AppCompat.Dark" android:orientation="vertical" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/colorPrime_toolbar" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+    <ScrollView android:id="@id/scrollView" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:theme="@style/ThemeOverlay.AppCompat.Dark" android:orientation="vertical" android:background="@color/colorItemBg" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="26.0sp" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_three_profit" android:paddingTop="14.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/font_black_3" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_three_title" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/font_black_1" android:gravity="center" android:id="@id/tv_three_more" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <View android:background="#eef2f1" android:layout_width="1.0dp" android:layout_height="match_parent" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" />
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="26.0sp" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_one_profit" android:paddingTop="14.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                        <TextView android:textSize="12.0sp" android:textColor="@color/font_black_3" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_one_title" />
+                        <TextView android:textSize="14.0sp" android:textColor="@color/font_black_1" android:gravity="center" android:id="@id/tv_one_more" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <View android:background="#eef2f1" android:layout_width="match_parent" android:layout_height="4.0dp" />
+                <RelativeLayout android:background="#e0f9fe" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/ranking_corner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/robot_market_normal" />
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/ranking_corner">
+                        <hc.com.robot.view.FontsTextView android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/ranking_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/robot_market_analyse_income_ranking" android:layout_marginStart="16.0dp" app:FontsTextView_typeface="rblacksimp" />
+                        <ImageView android:id="@id/ranking_img" android:layout_width="35.0dp" android:layout_height="56.0dp" android:layout_marginLeft="8.0dp" android:layout_marginRight="8.0dp" android:layout_toEndOf="@id/ranking_text" />
+                        <TextView android:textSize="@dimen/textsize_50sp" android:textStyle="bold" android:textColor="@color/textColor_DarkGreen" android:id="@id/raning_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toEndOf="@id/ranking_img" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="#eef2f1" android:layout_width="match_parent" android:layout_height="8.0dp" />
+            <RelativeLayout android:background="@color/colorWhite" android:paddingLeft="16.0dp" android:paddingTop="8.0dp" android:paddingRight="16.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="16.0sp" android:textColor="@color/black" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/robot_market_analyse_syqx" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/textsize_12sp" android:textColor="@color/font_up" android:gravity="center" android:id="@id/robot_cycle" android:background="@drawable/robot_bg_market_analyse_cycle" android:paddingLeft="6.0dp" android:paddingTop="2.0dp" android:paddingRight="6.0dp" android:paddingBottom="2.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="28.0dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <hc.com.robot.view.StockProfitView android:id="@id/profit_view" android:layout_width="match_parent" android:layout_height="200.0dp" />
+            <View android:background="#eef2f1" android:layout_width="match_parent" android:layout_height="8.0dp" />
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:background="@color/white" android:paddingLeft="16.0dp" android:paddingTop="8.0dp" android:paddingRight="16.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_record" />
+                    <TextView android:textColor="@color/black" android:id="@id/tv_more" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_more" android:layout_alignParentTop="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View android:background="#eef2f1" android:layout_width="match_parent" android:layout_height="8.0dp" />
+            <LinearLayout android:gravity="center_vertical" android:background="@color/white" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <EditText android:textSize="16.0sp" android:textColor="@color/black" android:textColorHint="@color/font_black_3" android:gravity="center" android:id="@id/et_price" android:background="@drawable/grey_border" android:padding="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/all_hint_one_calc" android:cursorVisible="true" android:inputType="numberDecimal" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_caculate" android:background="#0572cf" android:padding="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/robot_market_analyse_calculate" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="20.0dp">
+                    <me.grantland.widget.AutofitTextView android:textSize="25.0sp" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_profit" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0" android:maxLines="1" app:minTextSize="10.0sp" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/font_black_3" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/all_money" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

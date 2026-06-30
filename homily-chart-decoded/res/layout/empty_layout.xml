@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/emptyId" android:visibility="gone" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_centerInParent="true" />
+    <TextView android:textSize="18.0sp" android:id="@id/tv_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/zwsj" android:layout_below="@id/emptyId" android:layout_centerInParent="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

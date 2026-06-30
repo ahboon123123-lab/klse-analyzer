@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/banner" android:layout_width="match_parent" android:layout_height="130.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.youth.banner.Banner android:id="@id/ad_view" android:layout_width="match_parent" android:layout_height="130.0dp" app:image_scale_type="fit_xy" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/textColor_Black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_the_animation" android:layout_centerVertical="true" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/switch_display" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="ON" android:textOff="OFF" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:showText="true" app:switchTextAppearance="@style/SwitchCompatStyle" />
+    </RelativeLayout>
+    <RelativeLayout android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/textColor_Black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/open_the_voice" android:layout_centerVertical="true" />
+        <androidx.appcompat.widget.SwitchCompat android:id="@id/switch_sound" android:longClickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:textOn="ON" android:textOff="OFF" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:showText="true" app:switchTextAppearance="@style/SwitchCompatStyle" />
+    </RelativeLayout>
+</LinearLayout>

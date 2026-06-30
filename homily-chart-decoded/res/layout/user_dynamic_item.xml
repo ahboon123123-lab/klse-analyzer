@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp">
+        <TextView android:textSize="16.0sp" android:textColor="#555555" android:ellipsize="end" android:id="@id/user_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="标题" android:maxLines="2" />
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp">
+            <TextView android:textSize="14.0sp" android:textColor="#bbbbbb" android:id="@id/user_from" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Iphone" />
+            <TextView android:textSize="14.0sp" android:textColor="#bbbbbb" android:id="@id/user_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发表时间" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <TextView android:textSize="14.0sp" android:textColor="#a8a8a8" android:ellipsize="end" android:id="@id/user_content" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="内容" android:maxLines="3" />
+    </LinearLayout>
+    <LinearLayout android:gravity="right|center" android:orientation="horizontal" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textColor="#727883" android:gravity="center" android:layout_gravity="center" android:id="@id/user_like_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12.0dp" android:text="10" android:drawableLeft="@drawable/ic_like_small" android:drawablePadding="4.0dp" android:drawableStart="@drawable/ic_like_small" />
+        <TextView android:textSize="14.0sp" android:textColor="#727883" android:gravity="center" android:layout_gravity="center" android:id="@id/user_reviews_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:drawableLeft="@drawable/ic_reviews_small" android:drawablePadding="4.0dp" android:drawableStart="@drawable/ic_reviews_small" />
+    </LinearLayout>
+    <View android:background="#a8a8a8" android:layout_width="match_parent" android:layout_height="1.0dp" />
+</LinearLayout>

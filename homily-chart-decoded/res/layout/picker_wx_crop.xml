@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/mTitleBar" android:layout_width="match_parent" android:layout_height="50.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_back" android:layout_width="40.0dp" android:layout_height="50.0dp" android:src="@mipmap/picker_icon_back_black" android:scaleType="centerInside" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxWidth="165.0dp" android:text="图片剪裁" android:maxLines="1" android:layout_toEndOf="@id/iv_back" />
+    <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="bottom" android:id="@id/tv_rightBtn" android:background="#09c768" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="wrap_content" android:layout_height="28.0dp" android:layout_marginBottom="11.0dp" android:text="确定" android:layout_centerVertical="true" android:layout_marginEnd="10.0dp" android:layout_alignParentEnd="true" />
+</RelativeLayout>

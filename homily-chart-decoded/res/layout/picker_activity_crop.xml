@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/mRoot" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.ypx.imagepicker.widget.cropimage.CropImageView android:id="@id/cropView" android:layout_width="match_parent" android:layout_height="match_parent" />
+    <FrameLayout android:id="@id/mCropPanel" android:layout_width="match_parent" android:layout_height="match_parent" />
+</RelativeLayout>

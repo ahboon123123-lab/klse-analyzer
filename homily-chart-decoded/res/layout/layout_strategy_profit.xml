@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/layout_trend_title" layout="@layout/layout_trend_title" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:id="@id/iv_strategy_order" android:padding="@dimen/padding_4dp" android:visibility="visible" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/trend_order" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_12sp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_name" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_name" android:singleLine="true" android:layout_weight="1.0" android:paddingStart="@dimen/padding_4dp" app:minTextSize="@dimen/margin_12dp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_price" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_buy_price" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/margin_12dp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_rate" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_amount" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/margin_12dp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/tv_strategy_profit" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_profit" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/margin_12dp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/container_trend" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>

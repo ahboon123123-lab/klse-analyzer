@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_12dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:layout_gravity="center_vertical" android:background="@color/colorDark_divider" android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+    <TextView android:textColor="@color/colorDark_divider" android:gravity="center" android:id="@id/tv_tips" android:padding="@dimen/padding_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_bottom_tis" />
+    <TextView android:layout_gravity="center_vertical" android:background="@color/colorDark_divider" android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+</LinearLayout>

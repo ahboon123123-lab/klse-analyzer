@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@color/bk" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textSize="@dimen/textsize_12sp" android:textColor="@color/font_black_3" android:id="@id/tv_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dp" android:layout_marginBottom="5.0dp" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dp">
+        <de.hdodenhof.circleimageview.CircleImageView android:id="@id/civ_avatar" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_marginLeft="8.0dp" android:layout_marginRight="4.0dp" android:src="@drawable/icon_ai" android:scaleType="centerCrop" android:layout_alignParentLeft="true" app:civ_border_color="@color/bk" app:civ_border_width="1.0dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="10.0dp" android:layout_toRightOf="@id/civ_avatar">
+            <com.github.library.bubbleview.BubbleLinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" app:angle="5.0dp" app:arrowHeight="10.0dp" app:arrowLocation="left" app:arrowPosition="14.0dp" app:arrowWidth="8.0dp" app:bubbleColor="@color/bg_pink">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dp" android:layout_marginTop="10.0dp" android:layout_marginRight="4.0dp" android:layout_marginBottom="10.0dp">
+                    <TextView android:textSize="@dimen/textsize_18sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_video_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_sx_result" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/ll_news_container" android:background="@color/super_light_grey" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" />
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/font_black_3" android:id="@id/tv_news_ask" android:background="@color/white" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" />
+            </com.github.library.bubbleview.BubbleLinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

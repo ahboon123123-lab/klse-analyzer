@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/stock_guba_selector" android:paddingLeft="8.0dp" android:paddingTop="12.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/stock_avatar_height">
+        <com.hlzzb.xjp.common.view.CircleImageView android:id="@id/srcimg" android:layout_width="@dimen/stock_avatar_width" android:layout_height="@dimen/stock_avatar_height" app:border_color="@color/stock_guba_circle_image_border" app:border_width="1.0dp" />
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="12.0dp" android:layout_toRightOf="@id/srcimg" android:layout_marginStart="12.0dp" android:layout_toEndOf="@id/srcimg">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="14.0sp" android:textColor="#bbbbbb" android:id="@id/mynick" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="昵称" android:singleLine="true" />
+                <TextView android:textSize="12.0sp" android:textColor="#787878" android:id="@id/replyTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:singleLine="true" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="#787878" android:id="@id/mytime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发表时间" android:layout_alignParentBottom="true" />
+                <TextView android:textSize="12.0sp" android:textColor="#787878" android:id="@id/from" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="来源" android:layout_alignParentBottom="true" android:layout_marginStart="8.0dp" android:layout_toEndOf="@id/mytime" />
+                <ImageView android:id="@id/top" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_guba_top" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dp" android:layout_marginBottom="12.0dp">
+        <TextView android:textSize="16.0sp" android:textColor="#bbbbbb" android:id="@id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="标题" />
+        <TextView android:textSize="14.0sp" android:textColor="#a8a8a8" android:ellipsize="end" android:id="@id/mcontent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="内容" android:maxLines="3" />
+    </LinearLayout>
+    <TextView android:background="@color/stock_guba_item_divider" android:layout_width="match_parent" android:layout_height="1.0dp" />
+    <LinearLayout android:orientation="horizontal" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="42.0dp">
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="#727883" android:gravity="center" android:layout_gravity="center" android:id="@id/oknum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:drawableLeft="@drawable/ic_like_small" android:drawablePadding="4.0dp" android:drawableStart="@drawable/ic_like_small" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="#727883" android:gravity="center" android:layout_gravity="center" android:id="@id/discussnum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:drawableLeft="@drawable/ic_reviews_small" android:drawablePadding="4.0dp" android:drawableStart="@drawable/ic_reviews_small" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="#727883" android:gravity="center" android:layout_gravity="center" android:id="@id/readTimes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="10" android:drawableLeft="@drawable/ic_readtimes_small" android:drawablePadding="4.0dp" android:drawableStart="@drawable/ic_readtimes_small" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

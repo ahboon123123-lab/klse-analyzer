@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hc.com.robot.view.SimpleSwipeRefreshLayout android:theme="@style/ThemeOverlay.AppCompat.Dark" android:id="@id/swipe_layout" android:background="@color/colorItemBg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/colorPrime_toolbar" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+        <TextView android:background="@color/colorYellow" android:visibility="gone" android:text="@string/imitate_tips" style="@style/TextViewMarquee" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview_imitate" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </LinearLayout>
+</hc.com.robot.view.SimpleSwipeRefreshLayout>

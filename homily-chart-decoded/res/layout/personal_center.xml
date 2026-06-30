@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <ProgressBar android:id="@id/loading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <ScrollView android:background="#f5f5f5" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:layout_below="@id/tool">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@color/white" android:id="@id/setPasswordWarn" android:background="#233036" android:paddingLeft="16.0dp" android:paddingTop="8.0dp" android:paddingRight="16.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/warn_set_password" />
+            <LinearLayout android:orientation="vertical" android:id="@id/userview" android:background="@color/holo_black" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/white" android:gravity="center_vertical" android:layout_gravity="right" android:id="@id/sign" android:background="@drawable/sign_new" android:layout_width="60.0dp" android:layout_height="30.0dp" android:layout_margin="@dimen/base_margin" android:text="@string/personal_sign" android:paddingStart="4.0dp" />
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <TextView android:textSize="@dimen/text_large" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/username" android:layout_width="wrap_content" android:layout_height="50.0dp" android:text="--" android:layout_marginStart="100.0dp" />
+                        <LinearLayout android:gravity="center_vertical" android:background="#f5f5f5" android:layout_width="match_parent" android:layout_height="50.0dp" android:paddingStart="100.0dp">
+                            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/follow" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView android:textSize="@dimen/text_little_large" android:textColor="@color/black" android:id="@id/followtx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                                <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/follow" />
+                            </LinearLayout>
+                            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/fans" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                                <TextView android:textSize="@dimen/text_little_large" android:textColor="@color/black" android:id="@id/fanstx" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                                <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fans" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <com.hlzzb.xjp.common.view.CircleImageView android:layout_gravity="center_vertical" android:id="@id/personal_center_Head_portrait" android:background="@drawable/recommender_avatar_default" android:visibility="visible" android:layout_width="80.0dp" android:layout_height="80.0dp" android:layout_marginStart="@dimen/base_margin" />
+                </FrameLayout>
+            </LinearLayout>
+            <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginLeft="17.0dp" android:layout_marginRight="17.0dp" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_marginTop="8.0dp" android:layout_marginBottom="8.0dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_width="@dimen/person_icon_size" android:layout_height="@dimen/person_icon_size" android:src="@drawable/pic_icjf" />
+                    <TextView android:textColor="@color/personal_common_color" android:id="@id/personal_points" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="5.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_width="@dimen/person_icon_size" android:layout_height="@dimen/person_icon_size" android:src="@drawable/homilymoney_small" />
+                    <TextView android:textColor="@color/personal_common_color" android:id="@id/personal_gold" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_marginStart="5.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <ImageView android:layout_width="@dimen/person_icon_size" android:layout_height="@dimen/person_icon_size" android:src="@drawable/homilyjz_small" />
+                    <TextView android:textColor="@color/personal_common_color" android:id="@id/personal_diamonds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dp" android:paddingRight="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/coins_store" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/personal_integral_mall" android:drawablePadding="8.0dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:drawableStart="@drawable/ic_personal_shop" android:layout_alignParentStart="true" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/homilyId" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="Homily ID: " android:drawablePadding="8.0dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:drawableStart="@drawable/ic_personal_user" android:layout_alignParentStart="true" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_vertical" android:id="@id/nick" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="52.0dp" android:text="--" android:drawablePadding="8.0dp" android:layout_weight="5.0" android:drawableStart="@drawable/ic_personal_user" />
+                    <TextView android:textColor="@color/blue" android:gravity="center" android:id="@id/personal_nick_modify" android:background="@drawable/icon_exch" android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_vertical" android:id="@id/personal_phone" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="52.0dp" android:text="--" android:drawablePadding="8.0dp" android:layout_weight="5.0" android:drawableStart="@drawable/personal_phone" />
+                    <TextView android:textColor="@color/blue" android:gravity="center" android:id="@id/personal_phone_binding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dp" android:text="@string/personal_binding" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                    <TextView android:textColor="@color/blue" android:gravity="center" android:id="@id/personal_phone_modify" android:background="@drawable/icon_exch" android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_vertical" android:id="@id/email" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="52.0dp" android:text="--" android:drawablePadding="8.0dp" android:layout_weight="5.0" android:drawableStart="@drawable/ic_personal_email" />
+                    <TextView android:textColor="@color/blue" android:gravity="center" android:id="@id/personal_email_binding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dp" android:text="@string/personal_binding" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                    <TextView android:textColor="@color/blue" android:gravity="center" android:id="@id/personal_email_modify" android:background="@drawable/icon_exch" android:layout_width="25.0dp" android:layout_height="25.0dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/service_date_web" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/service_data_web" android:drawablePadding="8.0dp" android:drawableStart="@drawable/person_time_icon_c" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/personal_payment" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/personal_payment" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_pay" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/changePassword" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/reset_password" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_personal_password" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/personal_dynamic" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/personal_dynamic" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_personal_new" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/personal_coins_record" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/title_activity_coins_record" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_personal_ask_new" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <RelativeLayout android:id="@id/mymessagecontainer" android:background="@drawable/bg_personal_item" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/message" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_person_message" android:paddingStart="8.0dp" android:paddingEnd="5.0dp" />
+                </RelativeLayout>
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <TextView android:gravity="center_vertical" android:id="@id/invite" android:background="@drawable/bg_personal_item" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="52.0dp" android:text="@string/invite" android:drawablePadding="8.0dp" android:drawableStart="@drawable/ic_person_invitefriends" />
+                <View android:background="#cccccc" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                <Button android:textColor="@color/white" android:gravity="center" android:id="@id/logout" android:background="@drawable/btn_logout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:text="@string/logout" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

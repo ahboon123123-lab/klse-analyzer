@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/miage_data_kuang_normal_height" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/nearonemonth" />
+        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:id="@id/more_mouth_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/more" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+    <LinearLayout android:id="@id/index_title" android:focusable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/stock_pool_title" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/linerlayout" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="@dimen/margin_20dp" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_no_data" android:background="#12384a" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/margin_40dp" android:text="@string/all_no_data" />
+</LinearLayout>

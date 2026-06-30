@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="canvas_side_text_size">35.555573sp</dimen>
+    <dimen name="canvas_text_size">49.7778sp</dimen>
+    <dimen name="chips">142.2222dp</dimen>
+    <dimen name="chips_top">78.2222dp</dimen>
+    <dimen name="dp_10">35.555573dp</dimen>
+    <dimen name="dp_18">64.0dp</dimen>
+    <dimen name="dp_2">7.111084dp</dimen>
+    <dimen name="dp_4">14.2221985dp</dimen>
+    <dimen name="dp_40">142.2222dp</dimen>
+    <dimen name="dp_45">160.0dp</dimen>
+    <dimen name="dp_50">177.7778dp</dimen>
+    <dimen name="dp_72">256.0dp</dimen>
+    <dimen name="dp_80">284.4375dp</dimen>
+    <dimen name="dp_88">312.8828dp</dimen>
+    <dimen name="information">177.7778dp</dimen>
+    <dimen name="margin_top_elita">0.0dp</dimen>
+    <dimen name="recommendation">184.88889dp</dimen>
+    <dimen name="sp_12">42.666687sp</dimen>
+    <dimen name="sp_14">49.7778sp</dimen>
+    <dimen name="sp_16">56.888885sp</dimen>
+    <dimen name="stock_canvas_defaultKlineWidth">14.2221985dp</dimen>
+    <dimen name="stock_canvas_minKlineWidth">3.5555725dp</dimen>
+    <dimen name="textsize">42.666687sp</dimen>
+    <dimen name="textview_weight">391.10938dp</dimen>
+</resources>

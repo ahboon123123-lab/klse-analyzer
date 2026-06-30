@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_12dp" android:paddingTop="@dimen/padding_8dp" android:paddingRight="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_imitate_date" android:paddingTop="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_12dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textColor="@android:color/black" android:gravity="center" android:id="@id/tv_imitate_deal" android:paddingTop="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_12dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textColor="@android:color/black" android:gravity="center" android:id="@id/tv_imitate_price" android:paddingTop="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_12dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <TextView android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_imitate_profit" android:paddingTop="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_12dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</LinearLayout>

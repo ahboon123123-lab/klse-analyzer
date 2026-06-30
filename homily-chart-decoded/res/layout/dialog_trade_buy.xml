@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:padding="20.0dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/trade_dialog_bg" android:paddingTop="18.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center_horizontal" android:id="@id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="33.799988dp" />
+        <TextView android:textColor="#ff7d7d7d" android:id="@id/tvCode" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textColor="#ff7d7d7d" android:id="@id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textColor="#ff7d7d7d" android:id="@id/tvPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textColor="#ff7d7d7d" android:id="@id/tvVolume" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="37.099976dp">
+            <Button android:textSize="18.799988sp" android:textColor="#ff00b9d2" android:id="@id/btCancel" android:background="@drawable/bt_trade_dialog_gray" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="取消" android:layout_weight="1.0" />
+            <Button android:textSize="18.799988sp" android:textColor="#ff7d7d7d" android:id="@id/btConfirm" android:background="@drawable/bt_trade_dialog_gray" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="确认买入" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

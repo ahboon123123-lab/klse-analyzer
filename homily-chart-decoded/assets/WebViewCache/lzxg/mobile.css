@@ -1,0 +1,129 @@
+* {margin: 0px; padding: 0px;}
+img {border: none; vertical-align: middle;}
+
+/* 首页 */
+.header {background: url('../images/home-top-bg.jpg'); height: 72px;}
+.header .logo {float: left;}
+.header .languages {float: right; list-style-type: none; height: 72px; line-height: 72px; margin: 0px 15px 0px 0px;}
+.header .languages li {float: left;}
+.header .languages li a {font-size: 14px; color: #717171; font-family: Arial; text-decoration: none;}
+
+.nav {background: #c8c9cb;}
+.nav .nav-con {list-style-type: none;}
+.nav .nav-con li {float: left; text-align: center;}
+.nav .nav-con li a {display: inline-block; line-height: 35px; font-size: 12pt; color: #666668; font-family: Arial; text-decoration: none; padding: 0px 5px;}
+.nav .nav-con li a.selected {color: #231816;}
+
+.main {border: solid 1px #FFF;}
+
+.main .images {position: relative; margin: 0px auto;}
+.main .images img {float: left; width: 100%;}
+.main .images .down_android {position: absolute; top: 0px; right: 25%; z-index: 999;}
+.main .images .down_iphone {position: absolute; top: 1px; right: 10%; z-index: 999;}
+
+.main .images .download_qrcode {position: absolute; top: 0px; left: 10%; z-index: 999;}
+.main .images .download_facebook {position: absolute; top: 0px; left: 10%; z-index: 999;}
+.main .images .download_youtube {position: absolute; top: 0px; left: 20%; z-index: 999;}
+.main .images .download_twitter {position: absolute; top: 0px; left: 30%; z-index: 999;}
+.main .images .download_down_android {position: absolute; top: 0px; left: 20%; z-index: 999;}
+.main .images .download_down_iphone {position: absolute; top: 0px; right: 10%; z-index: 999;}
+
+.main .features_item {width: 80%; margin: 30px auto; font-family: Arial;}
+.main .features_item .item_title {font-size: 17px; color: #ff0000; text-align: right;}
+.main .features_item .item_image {margin: 15px 0px; text-align: center;}
+.main .features_item .item_image img {width: 90%;}
+
+@media screen and (min-width: 640px) {
+	.main .images {width: 60%;}
+	.main .features_item {width: 60%;}
+}
+
+.main .features_item .item_description {list-style: inside; color: #7a7a7a; font-size: 14px; line-height: 2em; text-align: left; margin: 0px 0px 0px 1em;}
+
+.main .service_item {width: 95%; padding: 20px 0px 10px 0px; margin: 20px auto; border-top: solid 1px #d9d9d9;}
+.main .service_item .item_left {float: left; width: 67px;}
+.main .service_item .item_right {float: left; width: 60%; margin: 0px 0px 0px 10px;}
+.main .service_item .item_right .item_description {color: #7a7a7a; font-size: 14px;}
+.main .service_item .item_right .item_detail {list-style-type: none; margin: 10px 0px 0px 0px;}
+.main .service_item .item_right .item_detail li {line-height: 1.5em;}
+.main .service_item .item_right .item_detail a {color: #ff1111; text-decoration: none; font-size: 13px;}
+
+.article {margin: 0px auto; padding: 0px 6px; font-family: Arial;}
+.article .article_title {color: #ff0000; font-size: 18px; margin: 5px 0px 10px 0px;}
+.article .article_content img {width: 260px;}
+.article .article_content .article_item_title {font-size: 14px; color: #231815; margin: 18px 0px 0px 0px;}
+.article .article_content p {color: #666; font-size: 13px; line-height: 22px;}
+.article .article_content .imgsep {margin: 30px 0px;}
+.article .video_play {width: 98%; height: 300px;}
+.article .article_content .article_item {margin: 0px 0px 20px 0px;}
+.article .article_content .article_item .article_item_title {color: #333; font-size: 16px; font-weight: bold;}
+.article .article_content .article_item p {color: #555; line-height: 24px; font-size: 14px;}
+
+.pushmessage {padding: 10px; font-size: 14px; font-family: Arial; line-height: 1.5em;}
+.main .pushmessage_title {color: #FF0000; font-size: 18px; margin: 10px 0px 10px 0px;}
+.main .pushmessage_content {margin: 10px 0px;}
+
+.footer {background: #fe0000; height: 15px;}
+
+.clearfix {clear: both;}
+
+.activateArea h2 {
+	background-color:#c4defd;
+	font-size:14px;
+	color:#2167b9;
+	font-weight:bold;
+	padding: 5px 8px;
+}
+.activateArea .form {margin: 10px 8px;}
+.activateArea .form .field {padding: 0px 0px 15px 0px;}
+.activateArea .form .field_name {font-size: 14px; padding: 0px 0px 8px 0px;}
+.activateArea .form .field_input .t_field {width: 180px; height: 22px; border: 1px solid #a6a6a6;}
+.activateArea .form .form_msg {
+	font-size: 13px;
+	color: #818181;
+	padding: 3px 0px 0px 0px;
+}
+.activateArea .form .error {
+	color: #E94441;
+}
+.activateArea .form .input_submit {background: #BEDAFC; border: 1px solid #82B3EC; text-align: center; padding: 3px 6px;}
+
+.activate_result {
+	display: none;
+	background: #f0f7ff;
+	border: 1px solid #82B3EC;
+	padding: 18px 0px;
+	text-align: center;
+	font-size: 12px;
+}
+
+/* loading */
+.activate_result .loading {
+	color: #ea4c0e;
+}
+
+/* success */
+.activate_result .success {
+	color: #3f7a00;
+}
+.activate_result .success p {
+	line-height: 26px;
+}
+.activate_result .success p.confirm_msg {
+	color: #787878;
+	font-size: 12px;
+}
+
+/* failed */
+.activate_result .failed {
+	color: #b94f0c;
+}
+
+.activate_footer {
+	color: #818181;
+	font-size: 12px;
+	text-align: center;
+	border-top: solid 1px #c1c1c1;
+	padding: 8px 0px 0px 0px;
+	margin: 24px 0px 10px 0px;
+}

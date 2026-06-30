@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/toolbar" />
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/news_text_selector" android:id="@id/hcfinance" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:layout_marginBottom="8.0dp" android:text="@string/hcfinance" android:layout_marginStart="5.0dp" />
+            <TextView android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <WebView android:id="@id/zxwz_web" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+            <RelativeLayout android:gravity="center_vertical" android:background="@color/black" android:layout_width="match_parent" android:layout_height="40.0dp">
+                <ImageButton android:id="@id/prev" android:background="@drawable/f10_prev" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" android:layout_marginStart="10.0dp" />
+                <ImageButton android:id="@id/next" android:background="@drawable/f10_next" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" android:layout_marginStart="15.0dp" android:layout_toEndOf="@id/prev" />
+                <ImageButton android:id="@id/refresh" android:background="@drawable/f10_refresh" android:layout_width="30.0dp" android:layout_height="30.0dp" android:contentDescription="@null" android:layout_marginEnd="10.0dp" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:visibility="visible" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>

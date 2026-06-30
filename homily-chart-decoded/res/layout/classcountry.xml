@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/class_toolbar" layout="@layout/toolbar" />
+    <ImageView android:id="@id/top_img" android:layout_width="match_parent" android:layout_height="180.0dp" android:src="@drawable/class_main_top" android:scaleType="fitXY" android:layout_below="@id/class_toolbar" />
+    <TextView android:textColor="@color/colorWhite" android:id="@id/class_download" android:background="@color/personal_common_color" android:paddingLeft="16.0dp" android:paddingTop="6.0dp" android:paddingRight="16.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="28.0dp" android:text="@string/download" android:layout_alignBottom="@id/top_img" android:layout_marginEnd="16.0dp" android:layout_alignParentEnd="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/book" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/class_dk" android:layout_below="@id/top_img" android:paddingStart="16.0dp" />
+    <GridView android:id="@id/ccList" android:layout_width="match_parent" android:layout_height="wrap_content" android:listSelector="@null" android:horizontalSpacing="2.0dp" android:verticalSpacing="2.0dp" android:numColumns="auto_fit" android:layout_below="@id/book" />
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/classloading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <TextView android:id="@id/load_retry" android:text="@string/noDataFound_retry" android:layout_centerInParent="true" style="@style/load_retry" />
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/tool">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:background="@color/color_black_d9d9d9" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mall_gold_quantity" android:paddingStart="8.0dp" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/gold_count" android:paddingTop="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="72.0dp" />
+                    <TextView android:background="@color/color_black_d9d9d9" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mall_gold_currency" android:paddingStart="8.0dp" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/gold_currency" android:paddingTop="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="72.0dp" />
+                    <TextView android:background="@color/color_black_d9d9d9" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/mall_gold_money" android:paddingStart="8.0dp" />
+                    <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/store_gold" android:background="@drawable/bg_text_border_mall" android:paddingLeft="16.0dp" android:paddingTop="4.0dp" android:paddingRight="16.0dp" android:paddingBottom="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18.0dp" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:layout_centerVertical="true" android:layout_marginStart="35.0dp" />
+                </LinearLayout>
+            </RelativeLayout>
+            <Button android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@id/store_buy" android:background="@color/shop_color" android:paddingLeft="128.0dp" android:paddingRight="128.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/mall_gold_buy" />
+        </LinearLayout>
+    </ScrollView>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/gold_progressbar" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>

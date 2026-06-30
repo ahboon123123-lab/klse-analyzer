@@ -1,0 +1,83 @@
+C23::C:PXAGCNYOZ\SP::SPOT SILVER (CNY/OZ)::银/人民币元(盎司)::(XAG/CNY-OZ)\SP
+C12::C:PXAGJPYOZ\SP::SPOT SILVER (JPY/OZ)::银/日元(盎司)::(XAG/JPY-OZ)\SP
+C2::C:PXAUAUDOZ\SP::SPOT GOLD (AUD/OZ)::黄金/澳元(盎司)::(XAU/AUD-OZ)\SP
+C13::C:PXAGEUROZ\SP::SPOT SILVER (EUR/OZ)::银/欧元(盎司)::(XAG/EUR-OZ)\SP
+C3::C:PXAUEUROZ\SP::SPOT GOLD (EUR/OZ)::黄金/欧元(盎司)::(XAU/EUR-OZ)\SP
+C14::C:PXPTEUROZ\SP::SPOT PLATINIUM (EUR/OZ)::铂/欧元(盎司)::(XPT/EUR-OZ)\SP
+C4::C:PXAUHKDOZ\SP::SPOT  GOLD(HKD/OZ)::黄金/港币(盎司)::(XAU/HKD-OZ)\SP
+C59::C:PXPDUSDOZ\SP::SPOT PALLADIUM::钯/美元(盎司)::(XPD/USD-OZ)\SP
+C15::C:PXPDEUROZ\SP::PALLADIUM SPOT (EUR)::钯/欧元(盎司)::(XPD/EUR-OZ)\SP
+C5::C:PXAUJPYOZ\SP::SPOT GOLD (JPY/OZ)::黄金/日元(盎司)::(XAU/JPY-OZ)\SP
+C49::C:PXPTUSDOZ\SP::Platinum US Dollars Per Ounce::白金/美元(盎司)::(XPT/USD-OZ)\SP
+C27::C:PXPTGBPOZ\SP::Spot Platinum (GBP/OZ)::铂/英镑(盎司)::(XPT/GBP-OZ)\SP
+C16::C:PXAGGBPOZ\SP::SPOT SILVER (GBP/OZ)::银/英镑(盎司)::(XAG/GBP-OZ)\SP
+C28::C:PXPDGBPOZ\SP::Palladium (GBP/OZ)::钯/英镑(盎司)::(XPD/GBP-OZ)\SP
+C17::C:PXAGAUDOZ\SP::SPOT SILVER (AUD/OZ)::银/澳元(盎司)::(XAG/AUD-OZ)\SP
+C7::C:PXAGUSDOZ\SP::SPOT SILVER::银/美元(盎司)::(XAG/USD-OZ)\SP
+C18::C:PXAUCADOZ\SP::SPOT GOLD (CAD/OZ)::黄金/加拿大元(盎司)::(XAU/CAD-OZ)\SP
+C19::C:PXAGCADOZ\SP::SPOT SILVER (CAD/OZ)::银/加拿大元(盎司)::(XAG/CAD-OZ)\SP
+C10::C:PXAUGBPOZ\SP::SPOT GOLD (GBP/OZ)::黄金/英镑(盎司)::(XAU/GBP-OZ)\SP
+C0::C:PXAGHKDOZ\SP::SPOT SILVER (HKD/OZ)::银/港币(盎司)::(XAG/HKD-OZ)\SP
+C22::C:PXAUCNYOZ\SP::SPOT GOLD (CNY/OZ)::黄金/人民币元(盎司)::(XAU/CNY-OZ)\SP
+C1::C:PXAUUSDOZ\SP::SPOT GOLD (ALSO LOCO LONDON GOLD)::黄金/美元(盎司)::(XAU/USD-OZ)\SP
+S24::X:SCADJPY::CANADIAN DOLLAR vs Japanese Yen Spot (CAD/JPY)::加拿大元/日元::(CAD/JPY)
+S79::X:SCHFUSD::Swiss Franc vs United States Dollar Spot (CHF/USD)::瑞士法郎/美元::(CHF/USD)
+S760::X:SCADAUD::CANADIAN DOLLAR vs Australian Dollar Spot (CAD/AUD)::加拿大元/澳元::(CAD/AUD)
+S771::X:SCHFEUR::Swiss Franc vs Euro Spot (CHF/EUR)::瑞士法郎/欧元::(CHF/EUR)
+S5106::X:SUSDIDR::United States Dollar vs Indonesian Rupiah Spot (USD/IDR)::美元/印尼卢比::(USD/IDR)
+S14::X:SUSDCHF::United States Dollar vs Swiss Franc Spot (USD/CHF)::美元/瑞士法郎::(USD/CHF)
+S25::X:SGBPCAD::Pound Sterling vs CANADIAN DOLLAR Spot (GBP/CAD)::英镑/加拿大元::(GBP/CAD)
+S101::X:SCHFHKD::Swiss Franc vs Hong Kong Dollar Spot (CHF/HKD)::瑞士法郎/港币::(CHF/HKD)
+S475::X:SUSDEUR::United States Dollar vs Euro Spot (USD/EUR)::美元/欧元::(USD/EUR)
+S772::X:SCADGBP::CANADIAN DOLLAR vs Pound Sterling Spot (CAD/GBP)::加拿大元/英镑::(CAD/GBP)
+S5602::X:SAUDCNY::Australian Dollar vs China Yuan Renminbi Spot (AUD/CNY)::澳元/人民币::(AUD/CNY)
+S15::X:SGBPJPY::Pound Sterling vs Japanese Yen Spot (GBP/JPY)::英镑/日元::(GBP/JPY)
+S26::X:SEURCAD::Euro vs CANADIAN DOLLAR Spot (EUR/CAD)::欧元/加拿大元::(EUR/CAD)
+S48::X:SGBPAUD::Pound Sterling vs Australian Dollar Spot (GBP/AUD)::英镑/澳元::(GBP/AUD)
+S59::X:SCADUSD::CANADIAN DOLLAR vs United States Dollar Spot (CAD/USD)::加拿大元/美元::(CAD/USD)
+S5108::X:SUSDMYR::United States Dollar vs Malaysian Ringgit Spot (USD/MYR)::美元/马来西亚林吉特::(USD/MYR)
+S5603::X:SNZDCNY::New Zealand Dollar vs China Yuan Renminbi Spot (NZD/CNY)::新西兰元/人民币::(NZD/CNY)
+S27::X:SCADCHF::CANADIAN DOLLAR vs Swiss Franc Spot (CAD/CHF)::加拿大元/瑞士法郎::(CAD/CHF)
+S49::X:SAUDUSD::Australian Dollar vs United States Dollar Spot (AUD/USD)::澳元/美元::(AUD/USD)
+S334::X:SUSDHKD::United States Dollar vs Hong Kong Dollar Spot (USD/HKD)::美元/港币::(USD/HKD)
+S763::X:SCHFGBP::Swiss Franc vs Pound Sterling Spot (CHF/GBP)::瑞士法郎/英镑::(CHF/GBP)
+S5109::X:SUSDPHP::United States Dollar vs Philippines Peso Spot (USD/PHP)::美元/菲律宾比索::(USD/PHP)
+S17::X:SEURCHF::Euro vs Swiss Franc Spot (EUR/CHF)::欧元/瑞士法郎::(EUR/CHF)
+S28::X:SUSDCAD::United States Dollar vs CANADIAN DOLLAR Spot (USD/CAD)::美元/加拿大元::(USD/CAD)
+S104::X:SCHFAUD::Swiss Franc vs Australian Dollar Spot (CHF/AUD)::瑞士法郎/澳元::(CHF/AUD)
+S511::X:SUSDTWD::United States Dollar vs New Taiwan Dollar Spot (USD/TWD)::美元/台湾元::(USD/TWD)
+S18::X:SAUDJPY::Australian Dollar vs Japanese Yen Spot (AUD/JPY)::澳元/日元::(AUD/JPY)
+S29::X:SGBPUSD::Pound Sterling vs United States Dollar Spot (GBP/USD)::英镑/美元::(GBP/USD)
+S5281::X:SEURCNY::Euro vs China Yuan Renminbi Spot (EUR/CNY)::欧元/人民币::(EUR/CNY)
+S7::X:SUSDJPY::United States Dollar vs Japanese Yen Spot (USD/JPY)::美元/日元::(USD/JPY)
+S19::X:SUSDSEK::United States Dollar vs Swedish Krona Spot (USD/SEK)::美元/瑞典克郎::(USD/SEK)
+S228::X:SAUDHKD::Australian Dollar vs Hong Kong Dollar Spot (AUD/HKD)::澳元/港币::(AUD/HKD)
+S5240::X:SGBPCNY::Pound Sterling vs China Yuan Renminbi Spot (GBP/CNY)::英镑/人民币::(GBP/CNY)
+S439::X:SUSDTHB::United States Dollar vs Thai Baht Spot (USD/THB)::美元/泰铢::(USD/THB)
+S5164::X:SUSDINR::United States Dollar vs Indian Rupee Spot (USD/INR)::美元/印度卢比::(USD/INR)
+S209::X:SHKDJPY::Hong Kong Dollar vs Japanese Yen Spot (HKD/JPY)::港币/日元::(HKD/JPY)
+S5385::X:SCHFCNY::Swiss Franc vs China Yuan Renminbi Spot (CHF/CNY)::瑞士法郎/人民币::(CHF/CNY)
+S51::X:SUSDDKK::United States Dollar vs Danish Krone Spot (USD/DKK)::美元/丹麦克郎::(USD/DKK)
+S182::X:SHKDCHF::Hong Kong Dollar vs Swiss Franc Spot (HKD/CHF)::港币/瑞士法郎::(HKD/CHF)
+S5595::X:SSGDCNY::Singapore Dollar vs China Yuan Renminbi Spot (SGD/CNY)::新加坡元/人民币::(SGD/CNY)
+S52::X:SUSDSGD::United States Dollar vs Singapore Dollar Spot (USD/SGD)::美元/新加坡元::(USD/SGD)
+S85::X:SGBPEUR::Pound Sterling vs Euro Spot (GBP/EUR)::英镑/欧元::(GBP/EUR)
+S183::X:SAUDGBP::Australian Dollar vs Pound Sterling Spot (AUD/GBP)::澳元/英镑::(AUD/GBP)
+S5112::X:SUSDCNY::United States Dollar vs China Yuan Renminbi Spot (USD/CNY)::美元/人民币::(USD/CNY)
+S20::X:SGBPCHF::Pound Sterling vs Swiss Franc Spot (GBP/CHF)::英镑/瑞士法郎::(GBP/CHF)
+S42::X:SEURHKD::Euro vs Hong Kong Dollar Spot (EUR/HKD)::欧元/港币::(EUR/HKD)
+S97::X:SCADHKD::CANADIAN DOLLAR vs Hong Kong Dollar Spot (CAD/HKD)::加拿大元/港币::(CAD/HKD)
+S5993::X:SUSDMOP::United States Dollar vs Macau Pataca Spot (USD/MOP)::美元/澳门元::(USD/MOP)
+S32::X:SEURGBP::Euro vs Pound Sterling Spot (EUR/GBP)::欧元/英镑::(EUR/GBP)
+S1055::X:SHKDCAD::Hong Kong Dollar vs CANADIAN DOLLAR Spot (HKD/CAD)::港币/加拿大元::(HKD/CAD)
+S11::X:SEURAUD::Euro vs Australian Dollar Spot (EUR/AUD)::欧元/澳元::(EUR/AUD)
+S22::X:SAUDCAD::Australian Dollar vs CANADIAN DOLLAR Spot (AUD/CAD)::澳元/加拿大元::(AUD/CAD)
+S1001::X:SCHFCAD::Swiss Franc vs CANADIAN DOLLAR Spot (CHF/CAD)::瑞士法郎/加拿大元::(CHF/CAD)
+S5599::X:SHKDCNY::Hong Kong Dollar vs China Yuan Renminbi Spot (HKD/CNY)::港币/人民币::(HKD/CNY)
+S0::X:SAUDCHF::Australian Dollar vs Swiss Franc Spot (AUD/CHF)::澳元/瑞士法郎::(AUD/CHF)
+S12::X:SEURJPY::Euro vs Japanese Yen Spot (EUR/JPY)::欧元/日元::(EUR/JPY)
+S23::X:SNZDUSD::New Zealand Dollar vs United States Dollar Spot (NZD/USD)::新西兰元/美元::(NZD/USD)
+S34::X:SEURUSD::Euro vs United States Dollar Spot (EUR/USD)::欧元/美元::(EUR/USD)
+S56::X:SAUDEUR::Australian Dollar vs Euro Spot (AUD/EUR)::澳元/欧元::(AUD/EUR)
+S132::X:SGBPHKD::Pound Sterling vs Hong Kong Dollar Spot (GBP/HKD)::英镑/港币::(GBP/HKD)
+S5600::X:SJPYCNY::Japanese Yen vs China Yuan Renminbi Spot (JPY/CNY)::日元/人民币::(JPY/CNY)

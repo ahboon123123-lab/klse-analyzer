@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/popup_reply" android:title="@string/reply_function" />
+    <item android:id="@id/popup_like" android:title="@string/class_praise" />
+</menu>

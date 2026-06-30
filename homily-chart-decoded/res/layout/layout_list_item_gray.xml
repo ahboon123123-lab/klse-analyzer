@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/colorWhite" android:padding="@dimen/padding_4dp" android:focusable="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/layout_stock_base" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="3.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_Gray" android:gravity="center" android:id="@id/tv_item_name" android:layout_width="match_parent" android:layout_height="0.0dp" android:text="@string/all_none" android:maxLines="2" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/textsize_12sp" android:textColor="@color/textColor_LightGray" android:gravity="center" android:id="@id/tv_item_code" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_none" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_item_price" android:layout_width="match_parent" android:layout_height="0.0dp" android:text="@string/all_none" android:layout_weight="1.0" />
+            <TextView android:textSize="@dimen/textsize_12sp" android:textColor="@color/textColor_LightGray" android:gravity="center" android:id="@id/tv_item_time" android:layout_width="match_parent" android:layout_height="0.0dp" android:text="@string/all_none" android:layout_weight="1.0" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_item_amount" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/all_none" android:maxLines="1" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:id="@id/tv_item_accumulated" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="@string/all_none" android:maxLines="1" android:layout_weight="1.0" />
+</LinearLayout>

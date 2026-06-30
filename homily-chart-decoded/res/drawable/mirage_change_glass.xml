@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_high" />
+    <item android:duration="200" android:drawable="@drawable/mirage_glass_low" />
+</animation-list>

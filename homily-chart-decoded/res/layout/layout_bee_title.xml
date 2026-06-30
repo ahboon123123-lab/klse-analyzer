@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/shape_bee_top" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <hc.com.robot.view.ShakeImageView android:id="@id/iv_robot_pic" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:layout_centerHorizontal="true" app:imageview_background="@drawable/shape_bee_tips" app:imageview_position="bee" app:imageview_src="@drawable/ic_bee_detial" />
+    <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_25sp" android:textStyle="bold" android:textColor="@color/textColor_Black" android:id="@id/tv_robot_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_8dp" android:text="@string/title_bee" android:layout_below="@id/iv_robot_pic" android:layout_centerHorizontal="true" app:FontsTextView_typeface="airstrike" />
+    <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_Black" android:ellipsize="end" android:id="@id/tv_robot_desc" android:padding="@dimen/padding_8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp" android:maxLines="2" android:layout_below="@id/tv_robot_name" android:lineSpacingExtra="@dimen/margin_4dp" />
+</RelativeLayout>

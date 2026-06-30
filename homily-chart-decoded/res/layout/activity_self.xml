@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hc.com.robot.view.SimpleSwipeRefreshLayout android:theme="@style/ThemeOverlay.AppCompat.Dark" android:id="@id/swipe_layout" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/colorPrime_toolbar" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+        <TextView android:background="@color/colorYellow" android:text="@string/self_tips" style="@style/TextViewMarquee" />
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_8dp" android:paddingRight="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_1dp">
+            <me.grantland.widget.AutofitTextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_Black" android:gravity="center" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_name" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+            <me.grantland.widget.AutofitTextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_Black" android:gravity="center" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_price" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+            <me.grantland.widget.AutofitTextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_Black" android:gravity="center" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_ranking" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+            <me.grantland.widget.AutofitTextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_Black" android:gravity="center" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_profit" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview_self" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/layout_item_title" />
+    </LinearLayout>
+</hc.com.robot.view.SimpleSwipeRefreshLayout>

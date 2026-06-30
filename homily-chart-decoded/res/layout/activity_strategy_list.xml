@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:orientation="vertical" android:id="@id/swipe_layout" android:background="@color/colorItemBg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/colorOrange" android:layout_width="match_parent" android:layout_height="?actionBarSize" app:titleTextColor="@color/colorWhite" />
+        <include android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/layout_list_protitle" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview_list" android:paddingLeft="@dimen/padding_12dp" android:paddingRight="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/layout_item_title" />
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

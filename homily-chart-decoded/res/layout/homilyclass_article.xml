@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar" />
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:paddingLeft="4.0dp" android:paddingTop="8.0dp" android:paddingRight="4.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp">
+                        <TextView android:textColor="#5f5f5f" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                        <TextView android:textColor="#5f5f5f" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="8.0dp" android:layout_alignParentEnd="true" />
+                        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8.0dp">
+                            <ImageView android:id="@id/iv_like" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/like" android:layout_centerVertical="true" />
+                            <TextView android:textColor="#5f5f5f" android:id="@id/likeNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_toEndOf="@id/iv_like" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <TextView android:background="#d5d5d5" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp" />
+                    <WebView android:textSize="14.0sp" android:textColor="#333333" android:id="@id/tv_discretion" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    </RelativeLayout>
+</LinearLayout>

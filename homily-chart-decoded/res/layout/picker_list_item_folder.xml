@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:paddingTop="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/cover" android:layout_width="72.0dp" android:layout_height="72.0dp" android:scaleType="centerCrop" android:layout_centerVertical="true" android:layout_marginStart="10.0dp" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginStart="16.0dp" android:layout_toStartOf="@id/indicator" android:layout_toEndOf="@id/cover">
+        <TextView android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/name" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:textColor="#acacac" android:ellipsize="end" android:id="@id/size" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/pricker_drop_down_checked" android:layout_centerVertical="true" android:layout_marginStart="10.0dp" android:layout_marginEnd="20.0dp" android:layout_alignParentEnd="true" />
+    <View android:id="@id/mDivider" android:layout_marginTop="10.0dp" android:layout_alignParentBottom="true" style="@style/horizontal_gray_divider" />
+</RelativeLayout>

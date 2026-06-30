@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:id="@id/five_star_pool_tab" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_50"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/textsize_20sp" android:textColor="@color/textColor_Yellow" android:gravity="center" android:id="@id/mid_term" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/medium_star" android:layout_weight="1.0" />
+    <TextView android:textSize="@dimen/textsize_20sp" android:textColor="@color/white" android:gravity="center" android:id="@id/middle_short_term" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/medium_short_star" android:layout_weight="1.0" />
+</LinearLayout>

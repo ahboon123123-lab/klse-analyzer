@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hc.com.robot.view.SimpleSwipeRefreshLayout android:id="@id/swipe_layout" android:background="@drawable/content_bg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview_detial" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </RelativeLayout>
+</hc.com.robot.view.SimpleSwipeRefreshLayout>

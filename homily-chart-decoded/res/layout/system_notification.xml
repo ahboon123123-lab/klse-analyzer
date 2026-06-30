@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="10.0dp" android:paddingRight="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="#696969" android:id="@id/notification_name" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今日表现优异，获得黑马悍将称号！" />
+    <TextView android:textColor="#778899" android:id="@id/notification_time" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09-09 17:22" android:layout_below="@id/notification_name" />
+    <TextView android:textColor="#778899" android:id="@id/notification_type" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="--" android:layout_toRightOf="@id/notification_time" android:layout_below="@id/notification_name" />
+    <TextView android:textColor="#778899" android:id="@id/notification_sendUser" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_below="@id/notification_name" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bk" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:theme="@style/RobotTheme" android:id="@id/toolbar" android:background="@color/bg_pink" android:layout_width="match_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <com.jcodecraeer.xrecyclerview.XRecyclerView android:id="@id/lv_message" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:transcriptMode="normal" android:layout_above="@id/divider" android:layout_below="@id/toolbar" />
+    <ListView android:id="@id/lv_search" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="150.0dp" android:layout_above="@id/divider" />
+    <ScrollView android:id="@id/promptScrollView" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="150.0dp" android:layout_above="@id/divider">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0sp" android:textColor="#666666" android:gravity="center_vertical" android:id="@id/promptQuote" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="50.0dp" />
+            <TextView android:textSize="16.0sp" android:textColor="#666666" android:gravity="center_vertical" android:id="@id/promptFunds" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="50.0dp" />
+            <TextView android:textSize="16.0sp" android:textColor="#666666" android:gravity="center_vertical" android:id="@id/promptSupport" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="50.0dp" />
+            <TextView android:textSize="16.0sp" android:textColor="#666666" android:gravity="center_vertical" android:id="@id/promptForecast" android:paddingTop="5.0dp" android:paddingBottom="5.0dp" android:layout_width="match_parent" android:layout_height="50.0dp" />
+        </LinearLayout>
+    </ScrollView>
+    <View android:id="@id/divider" android:background="@color/font_black_5" android:layout_width="match_parent" android:layout_height="1.0dp" android:layout_above="@id/ll" />
+    <include layout="@layout/layout_chat_bot" />
+</RelativeLayout>

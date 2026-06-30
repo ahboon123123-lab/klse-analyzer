@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="#323332" android:layout_width="match_parent" android:layout_height="48.0dp">
+        <LinearLayout android:id="@id/flip_text_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toLeftOf="@id/noticeOperation" android:layout_centerVertical="true">
+            <com.hlzzb.xjp.ui.home.view.FlipTextView android:layout_gravity="center_vertical" android:id="@id/flip_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" />
+        </LinearLayout>
+        <ImageButton android:id="@id/noticeOperation" android:background="@drawable/ic_action_overflow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dp" android:layout_marginRight="8.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

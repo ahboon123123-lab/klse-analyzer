@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/klineStyle" android:title="@string/stock_more_klinestyle" />
+    <item android:id="@id/indicatorHelp" android:title="@string/stock_more_indicator_help" />
+    <item android:id="@id/exright" android:title="@string/stock_more_exright" />
+    <item android:id="@id/drawline" android:title="@string/stock_more_drawline" />
+</menu>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/textsize_20sp" android:textColor="@android:color/black" android:gravity="center" android:id="@id/tv_item_title" android:background="@android:color/white" android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp" android:text="@string/bee_quantization_title" />
+    <LinearLayout android:orientation="vertical" android:id="@id/container_item" android:background="@color/colorItemBg" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>

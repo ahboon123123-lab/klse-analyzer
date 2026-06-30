@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_backgroundtop" android:scaleType="fitXY" />
+            <ImageView android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:layout_marginTop="25.0dp" android:src="@drawable/ic_robot_title" />
+        </FrameLayout>
+        <FrameLayout android:id="@id/centerFrame" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.5">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/imagecenter" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@drawable/ic_robot_backgroundcenter" android:scaleType="fitXY" />
+                <ImageView android:id="@id/imageAurora" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_jiguang" android:scaleType="fitXY" android:alpha="0.0" />
+                <ImageView android:layout_gravity="center" android:id="@id/imageStar" android:layout_width="210.0dp" android:layout_height="210.0dp" android:src="@drawable/ic_robot_star" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="end" android:id="@id/primeFrame" android:layout_width="@dimen/dp_88" android:layout_height="@dimen/dp_88" android:layout_marginTop="@dimen/dp_18" android:layout_marginEnd="@dimen/dp_80">
+                <ImageView android:id="@id/primeBackGround" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_defaultcircle" />
+                <ImageView android:id="@id/primeRobot" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_prime" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="center_vertical" android:id="@id/elitaFrame" android:layout_width="@dimen/dp_88" android:layout_height="@dimen/dp_88" android:layout_marginTop="@dimen/dp_40" android:layout_marginStart="@dimen/dp_45">
+                <ImageView android:id="@id/elitaBackground" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_defaultcircle" />
+                <ImageView android:id="@id/elitaRobot" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_elita" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="end|center" android:id="@id/mirageFrame" android:layout_width="@dimen/dp_88" android:layout_height="@dimen/dp_88" android:layout_marginTop="@dimen/dp_40" android:layout_marginEnd="@dimen/dp_45">
+                <ImageView android:id="@id/mirageBackGround" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_defaultcircle" />
+                <ImageView android:id="@id/mirageRobot" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_mirage" />
+            </FrameLayout>
+            <FrameLayout android:id="@id/beeFrame" android:layout_width="@dimen/dp_88" android:layout_height="@dimen/dp_88" android:layout_marginTop="@dimen/dp_18" android:layout_marginStart="@dimen/dp_80">
+                <ImageView android:id="@id/beeBackGround" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_defaultcircle" />
+                <ImageView android:id="@id/beeRobot" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_bee" />
+            </FrameLayout>
+            <FrameLayout android:layout_gravity="center|bottom" android:id="@id/ironFrame" android:layout_width="@dimen/dp_88" android:layout_height="@dimen/dp_88">
+                <ImageView android:id="@id/ironBackGround" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_defaultcircle" />
+                <ImageView android:id="@id/ironRobot" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_iron" />
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ic_robot_backgroundbuttom" android:scaleType="fitXY" />
+            <ImageView android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="@dimen/margin_50dp" android:layout_marginBottom="26.0dp" android:src="@drawable/ic_robot_english" />
+        </FrameLayout>
+    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_display" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+    <com.gongwen.marqueen.MarqueeView android:layout_gravity="center_horizontal" android:id="@id/display_marquee" android:layout_width="wrap_content" android:layout_height="?actionBarSize" android:layout_marginLeft="@dimen/margin_40dp" android:layout_marginRight="@dimen/margin_40dp" />
+</FrameLayout>

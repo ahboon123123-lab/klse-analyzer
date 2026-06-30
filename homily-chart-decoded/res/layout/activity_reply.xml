@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <EditText android:gravity="top" android:id="@id/content" android:background="@drawable/bg_text_border" android:padding="4.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/content_publish_view" android:lines="16" android:layout_below="@id/tool" />
+</RelativeLayout>

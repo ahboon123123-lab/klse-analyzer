@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:layout_gravity="center" android:id="@id/toolbar_intelligent" android:background="@color/bg_pink" android:layout_width="match_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" />
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/head" android:paddingLeft="20.0dp" android:paddingTop="10.0dp" android:paddingRight="20.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/search_view" android:background="@drawable/search_box" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dp" android:src="@drawable/search" android:layout_centerVertical="true" />
+                        <TextView android:textSize="15.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="40.0dp" android:layout_marginTop="0.0dp" android:text="@string/searchstock" android:layout_alignParentTop="true" android:layout_centerVertical="true" />
+                    </RelativeLayout>
+                    <TextView android:textSize="30.0sp" android:textColor="#ffffff" android:paddingTop="15.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Intelligent_chip" />
+                    <TextView android:textSize="14.0sp" android:textColor="#ffffff" android:paddingTop="3.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/Intelligent_chip_introduce" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:padding="20.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:background="@color/bg_pink" android:padding="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <TextView android:textSize="15.0sp" android:textColor="#ffffff" android:id="@id/stockname" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <TextView android:textColor="#ffffff" android:gravity="end" android:id="@id/stockdate" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:paddingTop="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="vertical" android:background="@drawable/text_yellow" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_marginRight="10.0dp" android:layout_weight="1.0">
+                            <TextView android:paddingLeft="5.0dp" android:paddingTop="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_chip" />
+                            <LinearLayout android:orientation="horizontal" android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView android:textSize="15.0sp" android:paddingLeft="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chipcost" />
+                                <TextView android:textSize="15.0sp" android:textColor="#ffa500" android:id="@id/theallcost" android:paddingLeft="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:background="@drawable/text_bule" android:paddingLeft="5.0dp" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_marginLeft="10.0dp" android:layout_weight="1.0">
+                            <TextView android:paddingLeft="5.0dp" android:paddingTop="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/main_chip" />
+                            <LinearLayout android:paddingBottom="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <TextView android:textSize="15.0sp" android:paddingLeft="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chipcost" />
+                                <TextView android:textSize="15.0sp" android:textColor="#0000ff" android:id="@id/thebankercost" android:paddingLeft="5.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <hc.com.robot.ui.robotelita.view.IntelligentChipView android:id="@id/my_view" android:layout_width="match_parent" android:layout_height="350.0dp" android:layout_marginTop="10.0dp" />
+                <RelativeLayout android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/image_retreat" android:layout_width="30.0dp" android:layout_height="30.0dp" android:layout_marginLeft="73.0dp" android:src="@drawable/elita_chouma_fastback" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_marginStart="73.0dp" android:layout_alignParentStart="true" />
+                    <ImageView android:id="@id/image_play" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/elita_chouma_start" android:layout_centerHorizontal="true" />
+                    <ImageView android:id="@id/image_speed" android:layout_width="30.0dp" android:layout_height="30.0dp" android:layout_marginRight="73.0dp" android:src="@drawable/elita_chouma_fastforward" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_marginEnd="73.0dp" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <TextView android:textSize="15.0sp" android:background="#dcdcdc" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/elitadisclaimer" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

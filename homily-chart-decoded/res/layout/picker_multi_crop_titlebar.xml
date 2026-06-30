@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/titleBar" android:layout_width="match_parent" android:layout_height="55.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/mBackImg" android:layout_width="55.0dp" android:layout_height="55.0dp" android:src="@mipmap/picker_icon_close_black" android:scaleType="centerInside" android:layout_alignParentStart="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <TextView android:textSize="15.0sp" android:textColor="#1a1a1a" android:ellipsize="end" android:gravity="center" android:id="@id/mTvSetName" android:layout_width="wrap_content" android:layout_height="match_parent" android:maxWidth="150.0dp" android:text="所有文件" android:maxLines="1" />
+        <ImageView android:id="@id/mArrowImg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/picker_arrow_down" android:layout_marginStart="5.0dp" />
+    </LinearLayout>
+    <TextView android:textSize="14.0sp" android:textColor="#859d7b" android:gravity="center" android:id="@id/mTvNext" android:paddingTop="4.0dp" android:paddingBottom="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="下一步" android:layout_centerVertical="true" android:paddingStart="10.0dp" android:paddingEnd="10.0dp" android:layout_marginEnd="10.0dp" android:layout_alignParentEnd="true" />
+    <TextView android:textColor="#ffffff" android:gravity="center" android:id="@id/mTvSelectNum" android:layout_width="20.0dp" android:layout_height="20.0dp" android:text="1" android:layout_centerVertical="true" android:layout_marginEnd="5.0dp" android:layout_toStartOf="@id/mTvNext" />
+</RelativeLayout>

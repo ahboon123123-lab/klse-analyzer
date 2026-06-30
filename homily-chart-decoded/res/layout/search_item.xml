@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="35.0dp">
+        <TextView android:textColor="@color/gray" android:gravity="center_vertical" android:id="@id/tv_record" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10.0dp" android:text="历史记录" android:layout_toLeftOf="@id/tv_delete" />
+        <ImageView android:id="@id/tv_delete" android:background="@drawable/delete" android:padding="12.0dp" android:layout_width="30.0dp" android:layout_height="@dimen/margin_30dp" android:layout_marginRight="10.0dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:background="@color/white" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="10.0dp" android:layout_marginRight="10.0dp" />
+</LinearLayout>

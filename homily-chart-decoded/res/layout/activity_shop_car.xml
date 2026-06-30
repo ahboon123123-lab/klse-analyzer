@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:background="#c1c1c1" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="18.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shopping_cart" />
+            <TextView android:textSize="18.0sp" android:id="@id/shopping_head_num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="18.0sp" android:id="@id/empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30.0dp" android:hint="@string/shopping_cart_is_empty" android:layout_centerHorizontal="true" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@id/shopping_list" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <com.wang.avi.AVLoadingIndicatorView android:id="@id/progressbar" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+        </RelativeLayout>
+    </LinearLayout>
+    <View android:background="#c2c2c2" android:layout_width="match_parent" android:layout_height="10.0dp" android:alpha="0.5" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45.0dp">
+        <CheckBox android:textSize="16.0sp" android:id="@id/is_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/select_all" />
+        <TextView android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <TextView android:textSize="16.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/amounts" android:layout_marginEnd="8.0dp" />
+        <TextView android:textSize="16.0sp" android:textColor="#ea0000" android:id="@id/money" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" android:layout_marginEnd="0.0dp" />
+        <TextView android:textSize="16.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/personal_gold" android:layout_marginEnd="8.0dp" />
+        <LinearLayout android:gravity="center" android:layout_gravity="right" android:id="@id/submit" android:background="#ea0000" android:paddingLeft="12.0dp" android:paddingRight="12.0dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/settlement" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/submit_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(0)" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar" />
+    <RelativeLayout android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ScrollView android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:background="#ffffff" android:paddingLeft="16.0dp" android:paddingTop="10.0dp" android:paddingRight="16.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dp">
+                        <ImageView android:id="@id/teacherPic" android:layout_width="80.0dp" android:layout_height="102.0dp" android:src="@drawable/lecturer" android:contentDescription="@null" android:layout_marginEnd="16.0dp" />
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_country" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/guojia" />
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_subject" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/zhuti" />
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/classdate" />
+                            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_kstime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/kstime" />
+                                <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_jstime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/jstime" />
+                            </LinearLayout>
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_teacher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/lecturer" />
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_language" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/language" />
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/type" />
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_tele" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/course_info_text_marginBottom" android:text="@string/telephone" />
+                            <TextView android:textSize="@dimen/course_info_text" android:textColor="@color/course_info_text" android:id="@id/tv_company" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/company" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <View android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="5.0dp" />
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:layout_marginBottom="6.0dp" android:layout_marginStart="10.0dp">
+                        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/kx" android:layout_weight="1.0" android:drawableStart="@drawable/seat_ok" />
+                        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/yx" android:layout_weight="1.0" android:drawableStart="@drawable/seat_selled" />
+                        <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/myseat" android:layout_weight="1.0" android:drawableStart="@drawable/seat_select" />
+                        <Button android:id="@id/ref" android:background="@drawable/refresh" android:layout_width="35.0dp" android:layout_height="34.0dp" android:layout_marginEnd="10.0dp" />
+                    </LinearLayout>
+                    <View android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="1.0dp" />
+                    <com.hlzzb.xjp.view.HScrollView android:background="@drawable/seat_def" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_marginBottom="10.0dp" android:fadeScrollbars="false">
+                        <com.hlzzb.xjp.widget.SeatView android:id="@id/seat" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </com.hlzzb.xjp.view.HScrollView>
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout android:orientation="vertical" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+                <View android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="5.0dp" android:layout_marginBottom="8.0dp" />
+                <Button android:enabled="false" android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@id/reserve" android:background="@drawable/btn_reserve_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp" android:text="@string/dianjiyuding" />
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/seatInfo" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="24.0dp" android:layout_marginRight="24.0dp">
+                    <TextView android:textSize="14.0sp" android:textColor="@color/course_info_text" android:id="@id/tv_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dp" />
+                    <Button android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@id/unsubscribe" android:background="@drawable/btn_reserve_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/class_unsubscribe" android:layout_alignParentBottom="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    </RelativeLayout>
+</LinearLayout>

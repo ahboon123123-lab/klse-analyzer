@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:background="@color/colorItemBg" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@id/layout_sub_strategy_title" layout="@layout/layout_strategy_title" />
+        <com.google.android.material.tabs.TabLayout android:id="@id/tablayout_sub_strategy" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp" android:layout_below="@id/layout_sub_strategy_title" app:tabGravity="fill" app:tabIndicatorColor="@color/colorAccent" app:tabSelectedTextColor="@android:color/black" app:tabTextAppearance="@android:style/TextAppearance.Widget" app:tabTextColor="@color/colorBlack">
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/bee_strategy_recent" />
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/bee_strategy_month" />
+        </com.google.android.material.tabs.TabLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/container_sub_strategy" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tablayout_sub_strategy" />
+        <include android:visibility="gone" layout="@layout/layout_empty" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

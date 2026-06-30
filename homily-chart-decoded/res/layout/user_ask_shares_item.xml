@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="14.0sp" android:textColor="#717171" android:id="@id/code" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="HLSTI(888888)" />
+            <TextView android:textSize="16.0sp" android:ellipsize="end" android:id="@id/user_ask_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="标题" android:maxLines="2" />
+            <TextView android:textSize="12.0sp" android:textColor="#bbbbbb" android:id="@id/user_ask_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="2015.8.21" />
+            <TextView android:textSize="14.0sp" android:textColor="#727883" android:gravity="center" android:id="@id/user_ask_reviews_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dp" android:text="10" android:drawableLeft="@drawable/ic_reviews_small" android:drawablePadding="4.0dp" android:drawableStart="@drawable/ic_reviews_small" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:gravity="center" android:layout_gravity="center" android:id="@id/lcsname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="姓名" />
+            <com.hlzzb.xjp.common.view.CircleImageView android:layout_gravity="center" android:id="@id/avatar" android:layout_width="42.0dp" android:layout_height="42.0dp" android:layout_marginTop="6.0dp" android:layout_marginBottom="6.0dp" android:src="@drawable/avatar" />
+            <TextView android:textColor="@color/user_ask_answered" android:gravity="center" android:layout_gravity="center" android:id="@id/replyState" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已回复" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

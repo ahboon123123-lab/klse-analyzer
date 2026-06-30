@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/toolbar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/message_personal_gb" android:background="@drawable/bg_personal_item" android:paddingTop="@dimen/base_margin" android:paddingBottom="@dimen/base_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:paddingStart="13.0dp">
+            <ImageView android:textSize="@dimen/text_little_large" android:gravity="center" android:layout_gravity="center" android:background="@android:color/transparent" android:layout_width="@dimen/avatar_normal" android:layout_height="@dimen/avatar_normal" android:src="@drawable/message_gb" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+            <ImageView android:layout_gravity="right|top" android:background="@drawable/message_is_new" android:paddingTop="@dimen/small_margin" android:visibility="invisible" android:layout_width="10.0dp" android:layout_height="10.0dp" android:paddingEnd="@dimen/small_margin" />
+        </FrameLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_marginTop="@dimen/small_margin" android:layout_weight="1.0" android:paddingStart="2.0dp">
+            <TextView android:textSize="15.5sp" android:textColor="#ff292929" android:gravity="left|bottom" android:layout_width="wrap_content" android:layout_height="0.0dp" android:text="@string/gb_info" android:layout_weight="1.0" />
+            <TextView android:textSize="12.5sp" android:textColor="#ff999999" android:gravity="left|top" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="0.0dp" android:text="符健推荐荣之联(002642)" android:maxLines="1" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="@dimen/small_margin">
+            <TextView android:textSize="12.5sp" android:textColor="#ff999999" android:gravity="left|bottom" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="0.0dp" android:text="10:20" android:layout_weight="1.0" android:paddingEnd="14.0dp" />
+            <TextView android:gravity="left|top" android:paddingTop="3.0dp" android:layout_width="wrap_content" android:layout_height="0.0dp" android:text="" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:background="@color/lightgray" android:layout_width="match_parent" android:layout_height="1.0dp" />
+</LinearLayout>

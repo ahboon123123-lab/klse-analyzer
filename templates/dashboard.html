@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KLSE Dashboard — Pick a Stock</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1419; color: #e1e8ed; }
+        a { color: #64b5f6; text-decoration: none; }
+        a:hover { color: #fff; }
+
+        .header { background: linear-gradient(135deg, #1a237e, #0d47a1); padding: 14px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .header h1 { font-size: 20px; }
+        .header .nav { display: flex; gap: 16px; font-size: 13px; }
+        .header .nav a { color: #90caf9; padding: 4px 10px; border-radius: 4px; }
+        .header .nav a:hover, .header .nav a.active { background: rgba(255,255,255,0.1); color: #fff; }
+
+        .container { max-width: 1400px; margin: 0 auto; padding: 16px; }
+
+        /* KLCI Bar */
+        .klci-bar { background: #1c2938; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px; border: 1px solid #2d3e50; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+        .klci-bar .klci-price { font-size: 24px; font-weight: 700; }
+        .klci-bar .klci-change { font-size: 14px; margin-left: 10px; }
+        .klci-bar .market-stats { display: flex; gap: 20px; font-size: 12px; color: #8899a6; }
+        .klci-bar .market-stats span { display: flex; flex-direction: column; align-items: center; }
+        .klci-bar .market-stats .num { font-size: 16px; font-weight: 600; color: #fff; }
+
+        /* Grid layout */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+        @media (max-width: 900px) { .grid, .grid-3 { grid-template-columns: 1fr; } }
+
+        .card { background: #1c2938; border-radius: 8px; padding: 16px; border: 1px solid #2d3e50; }
+        .card h3 { color: #64b5f6; font-size: 14px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .card h3 a { font-size: 11px; color: #8899a6; }
+
+        /* Tables */
+        .mini-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+        .mini-table th { text-align: left; color: #8899a6; padding: 4px 6px; border-bottom: 1px solid #2d3e50; font-size: 10px; text-transform: uppercase; }
+        .mini-table td { padding: 5px 6px; border-bottom: 1px solid #1a2530; }
+        .mini-table tr:hover { background: #263238; }
+        .mini-table .stock-link { color: #64b5f6; cursor: pointer; font-weight: 500; }
+        .mini-table .positive { color: #4caf50; }
+        .mini-table .negative { color: #f44336; }
+        .mini-table .volume { color: #8899a6; }
+
+        /* Search */
+        .search-section { margin-bottom: 16px; display: flex; gap: 10px; }
+        .search-section input { flex: 1; background: #1c2938; border: 1px solid #2d3e50; border-radius: 6px; padding: 10px 16px; color: #e1e8ed; font-size: 14px; }
+        .search-section input:focus { outline: none; border-color: #1a237e; }
+        .search-section button { background: #1a237e; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; }
+
+        .loading-sm { color: #8899a6; font-size: 12px; padding: 10px; text-align: center; }
+
+        /* Tabs */
+        .tab-btns { display: flex; gap: 4px; margin-bottom: 10px; }
+        .tab-btns button { background: #263238; color: #8899a6; border: none; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+        .tab-btns button.active { background: #1a237e; color: #fff; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📈 KLSE Dashboard</h1>
+        <div class="nav">
+            <a href="/">Top 50</a>
+            <a href="/dashboard" class="active">Dashboard</a>
+            <a href="/divergence">Divergence</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Search -->
+        <div class="search-section">
+            <input type="text" id="stock-search" placeholder="Search any stock code (e.g. 0145, CIMB, MAYBANK)..." onkeydown="if(event.key==='Enter')searchStock()">
+            <button onclick="searchStock()">View Chart →</button>
+        </div>
+
+        <!-- KLCI Bar -->
+        <div class="klci-bar">
+            <div>
+                <span style="color:#8899a6; font-size:12px;">FBMKLCI</span>
+                <span class="klci-price" id="klci-price">—</span>
+                <span class="klci-change" id="klci-change">—</span>
+            </div>
+            <div class="market-stats">
+                <span><span class="num positive" id="stat-up">—</span>Up</span>
+                <span><span class="num negative" id="stat-down">—</span>Down</span>
+                <span><span class="num" id="stat-unchanged">—</span>Flat</span>
+                <span><span class="num" id="stat-total-vol">—</span>Vol (M)</span>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="grid-3">
+            <!-- Top Volume -->
+            <div class="card">
+                <h3>🔥 Top Volume <a href="/">View all →</a></h3>
+                <table class="mini-table" id="top-volume-table">
+                    <thead><tr><th>Stock</th><th>Price</th><th>Chg%</th><th>Volume</th></tr></thead>
+                    <tbody><tr><td colspan="4" class="loading-sm">Loading...</td></tr></tbody>
+                </table>
+            </div>
+
+            <!-- Top Gainers -->
+            <div class="card">
+                <h3>🟢 Top Gainers</h3>
+                <table class="mini-table" id="top-gainers-table">
+                    <thead><tr><th>Stock</th><th>Price</th><th>Chg%</th><th>Volume</th></tr></thead>
+                    <tbody><tr><td colspan="4" class="loading-sm">Loading...</td></tr></tbody>
+                </table>
+            </div>
+
+            <!-- Top Losers -->
+            <div class="card">
+                <h3>🔴 Top Losers</h3>
+                <table class="mini-table" id="top-losers-table">
+                    <thead><tr><th>Stock</th><th>Price</th><th>Chg%</th><th>Volume</th></tr></thead>
+                    <tbody><tr><td colspan="4" class="loading-sm">Loading...</td></tr></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Divergence Signals -->
+        <div class="card" style="margin-bottom:16px;">
+            <h3>🔍 DE + MACD Divergence Signals <a href="/divergence">Full scanner →</a></h3>
+            <div id="divergence-preview" class="loading-sm">Click to scan...</div>
+            <button onclick="loadDivergence()" style="background:#4caf50;color:white;border:none;padding:6px 14px;border-radius:4px;cursor:pointer;font-size:12px;margin-top:8px;">Quick Scan (Top 30)</button>
+        </div>
+
+        <!-- Market Breadth -->
+        <div class="grid">
+            <div class="card">
+                <h3>📊 All Stocks by Market</h3>
+                <div class="tab-btns">
+                    <button class="active" onclick="loadAllStocks('all')">All</button>
+                    <button onclick="loadAllStocks('MAIN')">Main</button>
+                    <button onclick="loadAllStocks('ACE')">ACE</button>
+                    <button onclick="loadAllStocks('LEAP')">LEAP</button>
+                </div>
+                <table class="mini-table" id="all-stocks-table">
+                    <thead><tr><th>Code</th><th>Name</th><th>Price</th><th>Chg%</th><th>Volume</th></tr></thead>
+                    <tbody><tr><td colspan="5" class="loading-sm">Loading...</td></tr></tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h3>📋 Quick Stock Lookup</h3>
+                <p style="font-size:12px; color:#8899a6; margin-bottom:10px;">Type a stock code or name in the search bar above, or click any stock in the tables to view its full chart with Homily + Deviation Expert indicators.</p>
+                <div style="margin-top:12px;">
+                    <h4 style="font-size:12px; color:#8899a6; margin-bottom:8px;">Popular:</h4>
+                    <div style="display:flex; flex-wrap:wrap; gap:6px;">
+                        <a href="/stock/1155.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">MAYBANK</a>
+                        <a href="/stock/1023.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">CIMB</a>
+                        <a href="/stock/5347.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">TENAGA</a>
+                        <a href="/stock/1295.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">PBBANK</a>
+                        <a href="/stock/5225.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">IHH</a>
+                        <a href="/stock/8869.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">PMETAL</a>
+                        <a href="/stock/6645.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">INARI</a>
+                        <a href="/stock/5398.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">GAMUDA</a>
+                        <a href="/stock/7113.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">TOPGLOV</a>
+                        <a href="/stock/4677.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">YTL</a>
+                        <a href="/stock/0145.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">TFP</a>
+                        <a href="/stock/0138.KL" style="background:#263238;padding:4px 10px;border-radius:4px;font-size:11px;">ZETRIX</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function searchStock() {
+            let val = document.getElementById('stock-search').value.trim().toUpperCase();
+            if (!val) return;
+            if (!val.endsWith('.KL')) val += '.KL';
+            window.open('/stock/' + val, '_blank');
+        }
+
+        function formatVol(v) {
+            if (v >= 1e6) return (v/1e6).toFixed(1) + 'M';
+            if (v >= 1e3) return (v/1e3).toFixed(0) + 'K';
+            return v;
+        }
+
+        function renderStockTable(tableId, stocks, limit) {
+            const tbody = document.querySelector(`#${tableId} tbody`);
+            const data = stocks.slice(0, limit || 10);
+            if (!data.length) { tbody.innerHTML = '<tr><td colspan="5">No data</td></tr>'; return; }
+            tbody.innerHTML = data.map(s => {
+                const sym = s.Symbol || s.symbol || s.code || '';
+                const name = s.Name || s.name || sym;
+                const price = s['Close (RM)'] || s.price || 0;
+                const chg = s['Change (%)'] || s.change_pct || 0;
+                const vol = s.Volume || s.volume || 0;
+                const chgClass = chg >= 0 ? 'positive' : 'negative';
+                const link = sym.endsWith('.KL') ? sym : sym + '.KL';
+                return `<tr onclick="window.open('/stock/${link}','_blank')" style="cursor:pointer;">
+                    <td class="stock-link">${name.slice(0,12)}</td>
+                    <td>${price.toFixed ? price.toFixed(3) : price}</td>
+                    <td class="${chgClass}">${chg >= 0 ? '+' : ''}${typeof chg === 'number' ? chg.toFixed(2) : chg}%</td>
+                    <td class="volume">${formatVol(vol)}</td>
+                </tr>`;
+            }).join('');
+        }
+
+        async function loadTopVolume() {
+            try {
+                const res = await fetch('/api/top-volume?top=10&period=daily');
+                const data = await res.json();
+                if (data.stocks) {
+                    renderStockTable('top-volume-table', data.stocks, 10);
+
+                    // KLCI approximation from data
+                    document.getElementById('stat-total-vol').textContent = formatVol(data.total_volume);
+
+                    // Gainers / Losers from same data
+                    const sorted = [...data.stocks];
+                    const gainers = sorted.filter(s => s['Change (%)'] > 0).sort((a,b) => b['Change (%)'] - a['Change (%)']);
+                    const losers = sorted.filter(s => s['Change (%)'] < 0).sort((a,b) => a['Change (%)'] - b['Change (%)']);
+                    renderStockTable('top-gainers-table', gainers, 10);
+                    renderStockTable('top-losers-table', losers, 10);
+
+                    document.getElementById('stat-up').textContent = gainers.length;
+                    document.getElementById('stat-down').textContent = losers.length;
+                    document.getElementById('stat-unchanged').textContent = data.stocks.length - gainers.length - losers.length;
+                }
+            } catch(e) { console.error(e); }
+        }
+
+        async function loadAllStocks(market) {
+            document.querySelectorAll('.tab-btns button').forEach(b => b.classList.remove('active'));
+            event.target.classList.add('active');
+            const tbody = document.querySelector('#all-stocks-table tbody');
+            tbody.innerHTML = '<tr><td colspan="5" class="loading-sm">Loading from klsescreener...</td></tr>';
+            try {
+                const res = await fetch(`/api/klse-all?market=${market}&top=50`);
+                const data = await res.json();
+                if (data.stocks) {
+                    const tbody = document.querySelector('#all-stocks-table tbody');
+                    tbody.innerHTML = data.stocks.map(s => {
+                        const chgClass = s.change_pct >= 0 ? 'positive' : 'negative';
+                        return `<tr onclick="window.open('/stock/${s.symbol}','_blank')" style="cursor:pointer;">
+                            <td class="stock-link">${s.code}</td>
+                            <td>${s.name.slice(0,15)}</td>
+                            <td>${s.price.toFixed(3)}</td>
+                            <td class="${chgClass}">${s.change_pct >= 0 ? '+' : ''}${s.change_pct.toFixed(1)}%</td>
+                            <td class="volume">${formatVol(s.volume)}</td>
+                        </tr>`;
+                    }).join('');
+                }
+            } catch(e) {
+                document.querySelector('#all-stocks-table tbody').innerHTML = '<tr><td colspan="5">Error loading</td></tr>';
+            }
+        }
+
+        async function loadDivergence() {
+            const div = document.getElementById('divergence-preview');
+            div.innerHTML = '<span class="loading-sm">Scanning top 30 stocks... (30s)</span>';
+            try {
+                const res = await fetch('/api/divergence-scan?top=30');
+                const data = await res.json();
+                if (data.results.length === 0) {
+                    div.innerHTML = '<p style="color:#8899a6;font-size:12px;">No signals found right now.</p>';
+                    return;
+                }
+                div.innerHTML = data.results.slice(0, 8).map(s => {
+                    const cls = s.direction === 'BULLISH' ? 'positive' : 'negative';
+                    return `<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid #1a2530;font-size:12px;cursor:pointer;" onclick="window.open('/stock/${s.symbol}','_blank')">
+                        <span class="stock-link">${s.name || s.symbol}</span>
+                        <span>RM ${s.price}</span>
+                        <span class="${cls}">${s.direction} (${s.signal_count})</span>
+                    </div>`;
+                }).join('');
+            } catch(e) { div.innerHTML = '<p style="color:#f44336;">Error scanning</p>'; }
+        }
+
+        // Load KLCI
+        async function loadKLCI() {
+            try {
+                const res = await fetch('/api/stock/^KLSE/history?period=5d&interval=1d');
+                const data = await res.json();
+                if (data.history && data.history.length > 0) {
+                    const last = data.history[data.history.length - 1];
+                    const prev = data.history.length > 1 ? data.history[data.history.length - 2] : last;
+                    const change = last.close - prev.close;
+                    const changePct = (change / prev.close) * 100;
+                    document.getElementById('klci-price').textContent = last.close.toFixed(2);
+                    const chgEl = document.getElementById('klci-change');
+                    chgEl.textContent = `${change >= 0 ? '+' : ''}${change.toFixed(2)} (${changePct >= 0 ? '+' : ''}${changePct.toFixed(2)}%)`;
+                    chgEl.style.color = change >= 0 ? '#4caf50' : '#f44336';
+                }
+            } catch(e) {}
+        }
+
+        // Init
+        loadKLCI();
+        loadTopVolume();
+        loadAllStocks('all');
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/layout_main_market" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_16dp">
+                <RelativeLayout android:background="@color/colorCardBg" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:gravity="center" android:id="@id/tv_market_profit_title" android:padding="@dimen/padding_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/market_range_profit" />
+                    <TextView android:textSize="@dimen/textsize_30sp" android:textStyle="bold" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:padding="@dimen/padding_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="40.31%" android:layout_below="@id/tv_market_profit_title" />
+                </RelativeLayout>
+                <RelativeLayout android:background="@color/colorCardBg" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_16dp" android:layout_weight="1.0">
+                    <TextView android:gravity="center" android:id="@id/tv_market_amount_title" android:padding="@dimen/padding_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/market_range_amount" />
+                    <TextView android:textSize="@dimen/textsize_30sp" android:textStyle="bold" android:textColor="@color/textColor_DarkGreen" android:gravity="center" android:padding="@dimen/padding_16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="39.01%" android:layout_below="@id/tv_market_amount_title" />
+                </RelativeLayout>
+            </LinearLayout>
+            <include layout="@layout/layout_divider_lighth" />
+            <ImageView android:layout_width="match_parent" android:layout_height="240.0dp" android:layout_margin="@dimen/margin_12dp" android:src="@drawable/example_bs" android:scaleType="fitXY" />
+            <LinearLayout android:orientation="horizontal" android:background="@color/colorPrime" android:padding="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <me.grantland.widget.AutofitTextView android:textColor="@android:color/white" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/market_title_time" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_12sp" />
+                <me.grantland.widget.AutofitTextView android:textColor="@android:color/white" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/market_title_deal" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_12sp" />
+                <me.grantland.widget.AutofitTextView android:textColor="@android:color/white" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_buy_price" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_12sp" />
+                <me.grantland.widget.AutofitTextView android:textColor="@android:color/white" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/market_title_profit" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_12sp" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/container_market_record" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <TextView android:gravity="center" android:id="@id/tv_more" android:padding="@dimen/padding_12dp" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_more" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/layout_empty_market" android:focusable="true" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:gravity="center" android:padding="@dimen/padding_20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_failed" android:drawableTop="@drawable/icon_request_failed" android:drawablePadding="@dimen/padding_20dp" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.core.widget.NestedScrollView>

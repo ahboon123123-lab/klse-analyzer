@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/homilykits_menu_corner" android:padding="10.0dp" android:layout_width="260.0dp" android:layout_height="260.0dp">
+        <RelativeLayout android:id="@id/remoteView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@id/remote" android:layout_width="50.0dp" android:layout_height="50.0dp" android:src="@drawable/ic_home_control" android:layout_centerInParent="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/remote" android:layout_below="@id/remote" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/image_qsw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_homilykits_qsw" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/homilykits_qsw" android:layout_below="@id/image_qsw" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_alignParentEnd="true">
+            <ImageView android:id="@id/image_dragon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_homilykits_lcslpt" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/homilykits_lcsl" android:layout_below="@id/image_dragon" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <ImageView android:id="@id/image_blw" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_homilykits_blwpt" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/homilykits_blw" android:layout_below="@id/image_blw" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/show_home" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_home" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        <ImageView android:id="@id/homily_kits_help" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_shop_help_image" android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>

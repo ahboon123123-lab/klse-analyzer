@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@android:color/black" android:id="@id/tv_tips" android:background="@drawable/shape_prime_tips" android:padding="@dimen/padding_8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

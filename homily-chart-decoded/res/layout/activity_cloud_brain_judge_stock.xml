@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <WebView android:id="@id/cloud_webview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/tool" android:windowSoftInputMode="stateHidden|adjustResize" />
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>

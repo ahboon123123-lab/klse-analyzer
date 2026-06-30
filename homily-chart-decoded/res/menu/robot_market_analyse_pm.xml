@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/cycle_all" android:title="@string/robot_market_analyse_cycle_all" />
+    <item android:id="@id/cycle_year" android:title="@string/robot_market_analyse_cycle_year" />
+    <item android:id="@id/cycle_month" android:title="@string/robot_market_analyse_cycle_month" />
+    <item android:id="@id/cycle_week" android:title="@string/robot_market_analyse_cycle_week" />
+</menu>

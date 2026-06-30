@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <hc.com.server.view.MarqueeView android:id="@id/mMarqueeView" android:background="#febfd2" android:layout_width="match_parent" android:layout_height="40.0dp" app:direction="left" app:isRepeat="true" app:speed="240" app:startPoint="end" app:textSize="16.0sp" app:textcolor="@color/warn_text" />
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0">
+        <RelativeLayout android:id="@id/rl_stock_add" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@id/iv_stock_add" android:layout_width="180.0dp" android:layout_height="180.0dp" android:src="@drawable/stock_warning_add" android:layout_centerInParent="true" />
+            <TextView android:textSize="20.0sp" android:textColor="@color/warn_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_stock_empty" android:layout_below="@id/iv_stock_add" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_warn_add" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:id="@id/ll_warn_top" android:background="@color/white" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/warn_text" android:id="@id/tv_warn_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/warn_text" android:id="@id/tv_warn_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="24.0dp" android:paddingRight="24.0dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_newprice" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/tv_warn_price" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:paddingLeft="24.0dp" android:paddingRight="24.0dp" android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_raise" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/black" android:id="@id/tv_warn_raise" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" />
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/warn_divider" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <View android:background="@color/warn_bg" android:layout_width="match_parent" android:layout_height="10.0dp" />
+            <View android:background="@color/warn_divider" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <TextView android:background="@color/white" android:paddingLeft="12.0dp" android:paddingTop="6.0dp" android:paddingRight="12.0dp" android:paddingBottom="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/elita_warn_notify" />
+            <View android:background="@color/warn_divider" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <View android:background="@color/warn_bg" android:layout_width="match_parent" android:layout_height="10.0dp" />
+            <View android:background="@color/warn_divider" android:layout_width="match_parent" android:layout_height="1.0dp" />
+            <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@id/sl_warn_container" android:layout_width="match_parent" android:layout_height="wrap_content" />
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:background="#8f8f8f" android:paddingTop="8.0dp" android:paddingBottom="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/tv_warn_complete" android:background="@drawable/warn_corner" android:paddingLeft="16.0dp" android:paddingTop="4.0dp" android:paddingRight="16.0dp" android:paddingBottom="4.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_complete" />
+    </LinearLayout>
+</LinearLayout>

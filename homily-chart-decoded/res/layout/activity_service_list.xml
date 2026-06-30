@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/ic_home_remote" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/toolbar" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dp" android:layout_above="@id/loading_text" android:layout_centerHorizontal="true">
+        <com.wang.avi.AVLoadingIndicatorView android:id="@id/progressBar" android:layout_width="55.0dp" android:layout_height="55.0dp" android:layout_above="@id/loading_text" android:layout_centerHorizontal="true" app:indicatorColor="@color/white" app:indicatorName="BallSpinFadeLoaderIndicator" />
+        <TextView android:textSize="17.0sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/count_down" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:id="@id/loading_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="35.0dp" android:text="@string/remote_opening" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

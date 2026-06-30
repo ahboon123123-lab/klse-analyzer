@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="0.0dp" android:layout_height="150.0dp" android:layout_weight="1.0" android:layout_alignParentTop="true">
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true">
+                <ImageView android:padding="@dimen/dp_10" android:layout_width="150.0dp" android:layout_height="match_parent" android:src="@drawable/ic_fivestar_onebg" />
+                <ImageView android:layout_gravity="center" android:id="@id/five_star_twobg" android:padding="@dimen/dp_10" android:layout_width="130.0dp" android:layout_height="match_parent" android:src="@drawable/ic_fivestar_twobg" />
+                <ImageView android:layout_gravity="center" android:id="@id/five_star_threebg" android:padding="@dimen/dp_10" android:layout_width="120.0dp" android:layout_height="match_parent" android:src="@drawable/ic_fivestar_threebg" />
+                <ImageView android:layout_gravity="center" android:id="@id/five_star_fourbg" android:padding="@dimen/dp_10" android:layout_width="110.0dp" android:layout_height="match_parent" android:src="@drawable/ic_fivestar_fourbg" />
+                <ImageView android:layout_gravity="center" android:id="@id/five_star_centerbg" android:padding="@dimen/dp_10" android:layout_width="105.0dp" android:layout_height="105.0dp" android:src="@drawable/ic_fivestar_centerbg" />
+            </FrameLayout>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <TextView android:textSize="25.0dp" android:textColor="@color/colorYellow" android:layout_gravity="center_horizontal" android:id="@id/five_star_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:text="@string/five_star_stock_pool" />
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dp" android:layout_below="@id/five_star_name">
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/white" android:padding="@dimen/dp_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/core_technology" />
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/white" android:padding="@dimen/dp_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/data_platform" />
+                <TextView android:textSize="@dimen/textsize_14sp" android:textColor="@color/white" android:padding="@dimen/dp_4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/investment_concept" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="bottom" android:layout_width="match_parent" android:layout_height="70.0dp" android:src="@drawable/ic_fivestar_topbottomtwo" android:scaleType="fitXY" />
+</FrameLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#eeeeee" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ExpandableListView android:id="@id/exList" android:layout_width="match_parent" android:layout_height="wrap_content" android:cacheColorHint="#d5d5d5" android:childDivider="#e8e8e8" android:divider="#d5d5d5" android:dividerHeight="1.0dp" />
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/classloading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <TextView android:id="@id/load_retry" android:layout_centerInParent="true" style="@style/load_retry" />
+</RelativeLayout>

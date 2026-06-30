@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/robot_toolbar" />
+    <RelativeLayout android:id="@id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.tabs.TabLayout android:id="@id/tl_label" android:background="@color/colorDarkBlue" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabIndicatorColor="@color/colorRed" app:tabSelectedTextColor="@color/colorWhite" app:tabTextAppearance="@android:style/TextAppearance.Widget" app:tabTextColor="@color/colorWhite" />
+        <ScrollView android:id="@id/scrollView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/tl_label">
+            <LinearLayout android:orientation="vertical" android:background="#eef3f7" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/iv_nodata" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+                <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/recentContainer" android:paddingTop="10.0dp" android:paddingBottom="10.0dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:id="@id/recentNumName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/recent_one_year_num" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" />
+                    <ImageView android:id="@id/recentImage" android:layout_width="50.0dp" android:layout_height="60.0dp" android:src="@drawable/medal" android:layout_toRightOf="@id/recentNumName" />
+                    <TextView android:textSize="30.0sp" android:textColor="@color/lightgreen" android:id="@id/recentNum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dp" android:text="--" android:layout_toRightOf="@id/recentImage" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <TextView android:textSize="18.0sp" android:textColor="#b0b1b0" android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="40.0dp" android:text="@string/operation_suggest" />
+                <RelativeLayout android:gravity="center_horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/suggest_info" android:layout_width="300.0dp" android:layout_height="300.0dp" android:src="@drawable/suggest_zh" />
+                        <hc.com.robot.view.CircleRippleView android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/operation_suggesst" android:focusable="true" android:clickable="true" android:layout_width="100.0dp" android:layout_height="100.0dp" android:layout_centerInParent="true" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <TextView android:textSize="@dimen/textsize_18sp" android:gravity="center_vertical" android:background="@color/white" android:paddingLeft="16.0dp" android:layout_width="match_parent" android:layout_height="48.0dp" android:text="@string/all_record" />
+                <LinearLayout android:orientation="vertical" android:id="@id/viewContainer" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView android:textSize="18.0sp" android:textColor="#b0b1b0" android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="5.0dp" android:text="@string/income_risk" />
+                <LinearLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                    <RelativeLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/textsize_18sp" android:textColor="@color/textColor_DarkGreen" android:id="@id/tv_jycgv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_centerHorizontal="true" />
+                        <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/successRate" android:layout_below="@id/tv_jycgv" android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                    <RelativeLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <TextView android:textSize="@dimen/textsize_18sp" android:textColor="@color/textColor_DarkGreen" android:id="@id/tv_ljnsy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="--" android:layout_centerHorizontal="true" />
+                        <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/black" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="@string/ljnsyRate" android:layout_below="@id/tv_ljnsy" android:layout_centerHorizontal="true" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <hc.com.robot.view.StockProfitView android:id="@id/incomeRisk" android:background="@color/white" android:layout_width="match_parent" android:layout_height="200.0dp" />
+                <TextView android:textSize="18.0sp" android:textColor="#b0b1b0" android:gravity="center" android:background="@color/white" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="5.0dp" android:text="@string/tv_jysv" />
+                <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <RelativeLayout android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                        <hc.com.robot.view.WinningPercentageView android:id="@id/winningPercentage" android:background="@color/white" android:layout_width="200.0dp" android:layout_height="200.0dp" />
+                    </RelativeLayout>
+                    <LinearLayout android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_marginLeft="16.0dp" android:layout_weight="1.0">
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/iv_jycs" android:background="@color/white" android:layout_width="12.0dp" android:layout_height="12.0dp" />
+                            <TextView android:textSize="@dimen/textsize_16sp" android:id="@id/jycs" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_jycs" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/iv_ylcs" android:layout_width="12.0dp" android:layout_height="12.0dp" android:src="@color/colorDarkOrange" android:layout_centerVertical="true" />
+                            <TextView android:textSize="@dimen/textsize_16sp" android:id="@id/ylcs" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:layout_marginBottom="16.0dp" android:layout_toRightOf="@id/iv_ylcs" />
+                        </RelativeLayout>
+                        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <ImageView android:id="@id/iv_kscs" android:layout_width="12.0dp" android:layout_height="12.0dp" android:src="@color/colorDarkGray" android:layout_centerVertical="true" />
+                            <TextView android:textSize="@dimen/textsize_16sp" android:id="@id/kscs" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/iv_kscs" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/iv_nodata" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/tl_label">
+            <ImageView android:background="@drawable/nodata" android:layout_width="220.0dp" android:layout_height="153.0dp" android:layout_marginTop="56.0dp" />
+            <TextView android:padding="16.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/robot_bee_dee_out" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

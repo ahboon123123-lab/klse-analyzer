@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/shop_progressbar" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <TextView android:textSize="16.0sp" android:id="@id/shop_nodata" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/shop_no_data" android:layout_above="@id/comment" android:layout_centerInParent="true" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/shop_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@id/comment" android:layout_below="@id/tool" />
+    <Button android:enabled="false" android:textColor="@color/white" android:id="@id/comment" android:background="@drawable/shop_indicator_comment" android:layout_width="match_parent" android:layout_height="48.0dp" android:text="@string/indicator_comment" android:layout_alignParentBottom="true" />
+</RelativeLayout>

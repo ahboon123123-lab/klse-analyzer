@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_info_item" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_2dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/infoimageview" android:visibility="gone" android:layout_width="match_parent" android:layout_height="150.0dp" android:scaleType="fitXY" />
+    <TextView android:textSize="16.0sp" android:textColor="#000000" android:ellipsize="end" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="标题" android:maxLines="2" />
+    <TextView android:textSize="14.0sp" android:textColor="#b3b3b3" android:id="@id/infotime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:text="时间" android:layout_below="@id/title" />
+</LinearLayout>

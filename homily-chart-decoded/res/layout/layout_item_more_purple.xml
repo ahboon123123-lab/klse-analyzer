@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/shape_prime_bg" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="@dimen/padding_12dp" android:paddingRight="@dimen/padding_12dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/prime_tag" />
+        <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/textColor_White" android:id="@id/tv_robot_title" android:padding="@dimen/padding_12dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/margin_8dp" android:text="@string/all_income_month" android:layout_weight="1.0" />
+        <ImageView android:gravity="center" android:id="@id/iv_robot_more" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="@dimen/margin_4dp" android:src="@drawable/icon_right" />
+    </LinearLayout>
+    <LinearLayout android:background="@drawable/prime_foucs_bg" android:paddingLeft="@dimen/padding_12dp" android:paddingTop="@dimen/padding_8dp" android:paddingRight="@dimen/padding_12dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_name" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center_horizontal" android:id="@id/tv_order_item2" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_buy_price" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:id="@id/tv_order_item3" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_amount" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+        <me.grantland.widget.AutofitTextView android:textColor="@color/textColor_Black" android:gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_profit" android:singleLine="true" android:layout_weight="1.0" app:minTextSize="@dimen/textsize_10sp" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_container" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>

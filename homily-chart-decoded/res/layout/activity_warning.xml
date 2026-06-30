@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:background="@color/bg_pink" android:layout_width="match_parent" android:layout_height="?actionBarSize" app:contentInsetStart="0.0dp" app:popupTheme="@style/AppTheme.PopupOverlay">
+        <RelativeLayout android:padding="6.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="16.0sp" android:textColor="@color/bg_pink" android:id="@id/tv_warn_add" android:background="@drawable/warn_border_press_left" android:paddingLeft="12.0dp" android:paddingTop="6.0dp" android:paddingRight="12.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_add" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/white" android:id="@id/tv_warn_my" android:background="@drawable/warn_border_normal_right" android:paddingLeft="12.0dp" android:paddingTop="6.0dp" android:paddingRight="12.0dp" android:paddingBottom="6.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/elita_warn_mine" />
+            </LinearLayout>
+            <ImageView android:id="@id/iv_search" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_search" android:layout_centerVertical="true" android:layout_marginEnd="4.0dp" android:layout_alignParentEnd="true" />
+            <ImageView android:id="@id/iv_refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_action_refresh" android:layout_centerVertical="true" android:layout_marginEnd="8.0dp" android:layout_toStartOf="@id/iv_search" />
+            <ImageView android:id="@id/iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_back_tri" android:layout_centerVertical="true" android:layout_marginStart="4.0dp" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.viewpager.widget.ViewPager android:id="@id/vp_warn" android:layout_width="match_parent" android:layout_height="match_parent" />
+</LinearLayout>

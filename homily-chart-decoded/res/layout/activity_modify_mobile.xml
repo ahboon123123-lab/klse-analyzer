@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/main_bg" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent" skin:enable="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:skin="http://schemas.android.com/android/skin" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <LinearLayout android:orientation="vertical" android:padding="16.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/tool">
+        <TextView android:textColor="@color/gray" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/label_mobile" />
+        <EditText android:textColor="@color/text_color_gray" android:id="@id/mobile" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dp" android:hint="@string/not_settings" android:editable="false" />
+        <Button android:textColor="@color/colorWhite" android:id="@id/bind" android:background="@drawable/btn_register" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/bind_mobile" />
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+    <View android:background="@color/activity_back" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:alpha="0.3" android:layout_alignParentStart="true" skin:enable="true" />
+</RelativeLayout>

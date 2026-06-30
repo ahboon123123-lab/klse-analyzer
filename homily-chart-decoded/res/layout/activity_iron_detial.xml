@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/swipe_layout" android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/mirage_introduce_bg" android:scaleType="fitXY" />
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar_iron" android:layout_width="match_parent" android:layout_height="?actionBarSize" />
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <hc.com.robot.view.ShakeImageView android:id="@id/iv_robot_mirage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:layout_centerHorizontal="true" app:imageview_background="@drawable/shape_mirage_tips" app:imageview_position="ghost" app:imageview_src="@drawable/iron" />
+                    <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_25sp" android:textStyle="bold" android:textColor="@color/white" android:id="@id/tv_robot_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/margin_8dp" android:text="@string/title_iron" android:layout_below="@id/iv_robot_mirage" android:layout_centerHorizontal="true" app:FontsTextView_typeface="airstrike" />
+                    <TextView android:textSize="@dimen/textsize_16sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_robot_desc" android:padding="@dimen/padding_8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_8dp" android:text="@string/iron_introduce" android:maxLines="3" android:layout_below="@id/tv_robot_name" android:lineSpacingExtra="@dimen/margin_4dp" />
+                </RelativeLayout>
+                <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:background="@drawable/iron_text_bg" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20.0dp" android:text="@string/the_five_star_earnings" android:paddingStart="@dimen/dp_40" android:paddingEnd="@dimen/dp_40" app:FontsTextView_typeface="airstrike" />
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <hc.com.robot.ui.robotiron.activity.DrawLineView android:id="@id/draw_line" android:layout_width="match_parent" android:layout_height="match_parent" />
+                    <LinearLayout android:id="@id/indrouceLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <FrameLayout android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+                            <ImageView android:layout_gravity="center" android:id="@id/ic_fivestar_centergl" android:background="@drawable/ic_fivestar_centergl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_num1" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginTop="@dimen/margin_80dp" android:src="@drawable/ic_iron_rotateone" />
+                            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_num2" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginTop="@dimen/margin_80dp" android:src="@drawable/ic_iron_rotatetwo" />
+                            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_num3" android:layout_width="50.0dp" android:layout_height="50.0dp" android:layout_marginTop="@dimen/margin_80dp" android:src="@drawable/ic_iron_rotatethree" />
+                        </FrameLayout>
+                        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:padding="10.0dp" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+                            <FrameLayout android:id="@id/fivestar_stockpool" android:padding="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:layout_gravity="center" android:background="@drawable/ic_fivestar_gl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                                <TextView android:textSize="@dimen/margin_20dp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/five_star_stock_pool" />
+                            </FrameLayout>
+                            <FrameLayout android:id="@id/fivestar_record" android:padding="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:background="@drawable/ic_fivestar_gl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                                <TextView android:textSize="@dimen/margin_20dp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/the_five_star_record" />
+                            </FrameLayout>
+                            <FrameLayout android:id="@id/fivestar_favorite" android:padding="15.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                <ImageView android:background="@drawable/ic_fivestar_gl" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                                <TextView android:textSize="@dimen/textsize_20sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/the_five_star_optional" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <hc.com.robot.view.FontsTextView android:textSize="@dimen/textsize_25sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:background="@drawable/iron_text_bg" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20.0dp" android:text="@string/latest_achievements" app:FontsTextView_typeface="airstrike" />
+                <RelativeLayout android:background="@color/black" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:layout_marginStart="@dimen/dp_10" android:layout_marginEnd="@dimen/dp_10">
+                    <ImageView android:background="@drawable/irohide" android:layout_width="80.0dp" android:layout_height="49.0dp" />
+                    <LinearLayout android:orientation="horizontal" android:id="@id/recordhead" android:background="#12384a" android:layout_width="match_parent" android:layout_height="@dimen/margin_50dp" android:layout_marginTop="23.0dp" android:layout_centerHorizontal="true" android:layout_marginStart="35.0dp">
+                        <TextView android:textColor="#c8c8ff" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_name" android:layout_weight="1.0" />
+                        <View android:layout_gravity="center_vertical" android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" />
+                        <TextView android:textColor="#c8c8ff" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_buy_price" android:layout_weight="1.0" />
+                        <View android:layout_gravity="center_vertical" android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" />
+                        <TextView android:textColor="#c8c8ff" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_amount" android:layout_weight="1.0" />
+                        <View android:layout_gravity="center_vertical" android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" />
+                        <TextView android:textColor="#c8c8ff" android:gravity="center" android:layout_gravity="center" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="@string/all_stock_profit" android:layout_weight="1.2" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@id/nodata" android:background="#12384a" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@id/recordhead" android:layout_centerHorizontal="true" android:layout_marginStart="35.0dp">
+                        <TextView android:gravity="center" android:background="#102936" android:padding="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/all_no_data" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/fivestar_recordlist" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="25.0dp" android:layout_below="@id/nodata" android:layout_centerHorizontal="true" android:layout_marginStart="35.0dp" />
+                    <ImageView android:background="@drawable/irohideaction" android:layout_width="@dimen/margin_80dp" android:layout_height="49.0dp" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:layout_marginBottom="@dimen/dp_40" android:layout_marginStart="@dimen/margin_12dp" android:layout_marginEnd="@dimen/margin_12dp">
+                    <TextView android:layout_gravity="center_vertical" android:background="@color/colorDark_divider" android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                    <TextView android:textColor="@color/colorDark_divider" android:gravity="center" android:id="@id/tv_tips" android:padding="@dimen/padding_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_bottom_tis" />
+                    <TextView android:layout_gravity="center_vertical" android:background="@color/colorDark_divider" android:layout_width="0.0dp" android:layout_height="1.0dp" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

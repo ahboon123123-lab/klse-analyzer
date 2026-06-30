@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@android:color/white" android:paddingTop="@dimen/padding_8dp" android:paddingBottom="@dimen/padding_8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_8dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/tv_prime_income" android:text="@string/all_income_title" android:drawableTop="@drawable/ic_income" style="@style/TextViewB" />
+    <TextView android:id="@id/tv_prime_imitate" android:text="@string/all_imitate_deal" android:drawableTop="@drawable/ic_imitate" style="@style/TextViewB" />
+    <TextView android:id="@id/tv_prime_self" android:text="@string/all_self_analysis" android:drawableTop="@drawable/ic_self" style="@style/TextViewB" />
+    <TextView android:id="@id/tv_prime_market" android:text="@string/all_market_analysis" android:drawableTop="@drawable/ic_market" style="@style/TextViewB" />
+</LinearLayout>

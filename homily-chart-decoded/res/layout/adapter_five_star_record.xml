@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/recorditem" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/record_name" android:padding="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="股票名称" android:layout_centerInParent="true" />
+                <View android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/record_code" android:padding="@dimen/dp_10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="股票代码" android:layout_centerInParent="true" />
+                <View android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" android:layout_centerVertical="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/record_price" android:padding="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="买入价" android:layout_centerInParent="true" />
+                </RelativeLayout>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textColor="@color/white" android:gravity="center" android:id="@id/record_time" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="0.0dp" android:text="时间" android:layout_alignParentTop="true" android:paddingStart="5.0dp" android:paddingEnd="5.0dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:layout_gravity="center_vertical" android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" />
+        <TextView android:gravity="center" android:id="@id/record_amount" android:padding="@dimen/dp_10" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="区间涨幅" android:singleLine="true" android:layout_weight="1.0" />
+        <View android:layout_gravity="center_vertical" android:background="#656e74" android:layout_width="0.5dp" android:layout_height="@dimen/margin_20dp" />
+        <TextView android:gravity="center" android:id="@id/record_accumulated" android:padding="@dimen/dp_10" android:layout_width="0.0dp" android:layout_height="match_parent" android:text="累计收益" android:singleLine="true" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

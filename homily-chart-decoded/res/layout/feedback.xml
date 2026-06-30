@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include layout="@layout/toolbar" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="16.0dp" android:paddingTop="16.0dp" android:paddingRight="16.0dp" android:paddingBottom="16.0dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <EditText android:textSize="16.0sp" android:gravity="left|top" android:id="@id/content" android:background="@drawable/feedback_content_bg" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/feedback_text_hint" android:lines="10" android:singleLine="false" />
+            <EditText android:textSize="16.0sp" android:id="@id/contact" android:background="@drawable/feedback_content_bg" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="48.0dp" android:layout_marginTop="8.0dp" android:hint="@string/contact" />
+        </LinearLayout>
+    </LinearLayout>
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/loading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>

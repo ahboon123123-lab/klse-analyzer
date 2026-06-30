@@ -1,0 +1,95 @@
+.main {
+	width: 960px;
+	margin: 0px auto;
+	font-size: 14px;
+}
+
+.main h1 {
+	text-align: center;
+	font-size: 21px;
+}
+
+.main h1 span {
+	color: #f00;
+}
+
+.table {
+	width: 80%;
+	margin: 0px auto;
+	background: #ccc;
+	font-size: 14px;
+}
+
+.table td,th {
+	background: #fff;
+	line-height: 2em;
+	text-align: center;
+}
+
+.cond {
+	margin: 20px 0px;
+}
+
+.login_info {
+	margin: 20px 0px;
+}
+
+.login_info span {
+	display: inline-block;
+	margin: 0px 12px 0px 0px;
+}
+
+.login_info span a {
+	font-size: 14px;
+	text-align: center;
+	color: #228fbd;
+	text-decoration: underline;
+}
+
+/* page */
+.pageContainer {
+	text-align: center;
+}
+
+.page {
+	font-size: 12px;
+	margin: 20px 0px 10px 0px;
+}
+
+.page a {
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	line-height: 22px;
+	margin-right: 3px;
+	padding: 0px 5px;
+	border: solid 1px #dbdbdb;
+	color: #0066cc;
+}
+
+.page a:hover {
+	color: #FFF;
+	background: #d0563e;
+}
+
+.page .pc {
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	line-height: 22px;
+	margin-right: 3px;
+	padding: 0px 5px;
+	border: solid 1px #dbdbdb;
+	color: #b5b5b5;
+}
+
+.page .c {
+	display: inline-block;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	line-height: 22px;
+	margin-right: 3px;
+	padding: 0px 5px;
+	border: 0;
+	font-weight: bold;
+} /* current */

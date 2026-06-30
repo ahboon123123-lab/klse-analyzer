@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/rating_important" android:id="@id/action_course" android:title="@string/action_course" app:showAsAction="ifRoom" />
+    <item android:icon="@drawable/product_meun" android:id="@id/action_product" android:title="@string/activity_label_product" app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_16dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:background="@drawable/shape_prime_bg" android:layout_width="match_parent" android:layout_height="@dimen/detial_calc_height">
+        <RelativeLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="3.0">
+            <EditText android:textSize="@dimen/textsize_14sp" android:textColor="@color/textColor_White" android:textColorHint="@color/textColor_White" android:gravity="center" android:id="@id/et_input_calc" android:background="@drawable/ic_prime_profit" android:padding="@dimen/padding_12dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_20dp" android:minWidth="100.0dp" android:hint="@string/all_hint_one_calc" android:maxLines="1" android:maxLength="10" android:layout_centerHorizontal="true" android:inputType="numberDecimal" />
+            <TextView android:textSize="@dimen/textsize_16sp" android:textStyle="bold" android:textColor="@color/textColor_White" android:gravity="center" android:id="@id/btn_robot_calc" android:background="@drawable/shape_prime_btn" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/margin_12dp" android:text="@string/all_clac" android:layout_alignLeft="@id/et_input_calc" android:layout_alignRight="@id/et_input_calc" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <include layout="@layout/layout_divider_darkv" />
+        <RelativeLayout android:layout_width="0.0dp" android:layout_height="match_parent" android:layout_weight="2.0">
+            <me.grantland.widget.AutofitTextView android:textSize="@dimen/textsize_30sp" android:textStyle="bold" android:textColor="@color/textColor_DarkGreen" android:id="@id/tv_profit_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/margin_40dp" android:text="@string/all_none" android:singleLine="true" android:layout_centerHorizontal="true" app:minTextSize="@dimen/textsize_20sp" />
+            <TextView android:textSize="@dimen/textsize_16sp" android:textStyle="bold" android:textColor="@color/textColor_White" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all_money" android:layout_below="@id/tv_profit_value" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <include layout="@layout/layout_btm_line" />
+</LinearLayout>

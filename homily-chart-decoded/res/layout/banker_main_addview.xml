@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/banker_title" android:background="@color/color_personal_item_pressed" android:padding="10.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/tab_linearlayout" android:layout_width="match_parent" android:layout_height="wrap_content" />
+</LinearLayout>

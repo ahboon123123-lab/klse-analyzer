@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/tool" layout="@layout/toolbar" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@id/tool">
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/user_dynamic_listview" android:layout_width="match_parent" android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <TextView android:textSize="16.0sp" android:textColor="#717171" android:id="@id/noData" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dp" android:text="@string/zwsj" android:layout_centerInParent="true" />
+    <com.wang.avi.AVLoadingIndicatorView android:id="@id/user_dynamic_loading" android:visibility="gone" android:layout_width="@dimen/loading_size" android:layout_height="@dimen/loading_size" android:layout_centerInParent="true" app:indicatorColor="@color/loading_white_background" app:indicatorName="LineSpinFadeLoaderIndicator" />
+</RelativeLayout>
